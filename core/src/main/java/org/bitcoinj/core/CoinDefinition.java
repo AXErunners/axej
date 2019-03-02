@@ -35,13 +35,13 @@ public class CoinDefinition {
     };
     public static final UnspentAPIType UnspentAPI = UnspentAPIType.Cryptoid;
 
-    public static final String BLOCKEXPLORER_BASE_URL_PROD = "http://explorer.axe.org/";    //blockr.io
+    public static final String BLOCKEXPLORER_BASE_URL_PROD = "https://insight.axecore.net/";    //blockr.io
     public static final String BLOCKEXPLORER_ADDRESS_PATH = "address/";             //blockr.io path
     public static final String BLOCKEXPLORER_TRANSACTION_PATH = "tx/";              //blockr.io path
     public static final String BLOCKEXPLORER_BLOCK_PATH = "block/";                 //blockr.io path
-    public static final String BLOCKEXPLORER_BASE_URL_TEST = "http://test.explorer.axe.org/";
+    public static final String BLOCKEXPLORER_BASE_URL_TEST = "https://test.insight.axecore.net/";
 
-    public static final String DONATION_ADDRESS = "Xdeh9YTLNtci5zSL4DDayRSVTLf299n9jv";  //Hash Engineering donation AXE address
+    public static final String DONATION_ADDRESS = "7mLZCucekeWCXYaiR93BThq9TdYc1ZS7Tw";  //Hash Engineering donation AXE address
 
     enum CoinHash {
         SHA256,
