@@ -113,9 +113,10 @@ public class CoinDefinition {
 
     //net.cpp strDNSSeed
     static public String[] dnsSeeds = new String[] {
-            "dnsseed.axe.org",
-            "dnsseed.axedot.io",
-            "dnsseed.masternode.io",
+            "seed1.0313370.xyz",
+            "seed2.0313370.xyz",
+            "207.246.65.11",
+            "45.32.168.226",
     };
 
 
