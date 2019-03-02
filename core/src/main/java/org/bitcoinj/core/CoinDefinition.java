@@ -88,8 +88,8 @@ public class CoinDefinition {
 
     public static final boolean supportsBloomFiltering = true; //Requires PROTOCOL_VERSION 70000 in the client
 
-    public static final int Port    = 9999;       //protocol.h GetDefaultPort(testnet=false)
-    public static final int TestPort = 19999;     //protocol.h GetDefaultPort(testnet=true)
+    public static final int Port    = 9937;       //protocol.h GetDefaultPort(testnet=false)
+    public static final int TestPort = 19937;     //protocol.h GetDefaultPort(testnet=true)
 
     //
     //  Production
