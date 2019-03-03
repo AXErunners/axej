@@ -1,4 +1,4 @@
-# axej-bls
+# dashj-bls
 AxeJ Wrapper for bls-signatures
 
 Building the Java Wrapper:
