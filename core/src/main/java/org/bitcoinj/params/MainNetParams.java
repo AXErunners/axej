@@ -368,8 +368,8 @@ public class MainNetParams extends AbstractBitcoinNetParams {
                 0x6e859cdd
         };
 
-        budgetPaymentsStartBlock = 328008;
         strSporkAddress = "PR8VqUyRm1Dm9tii6uv9D7gidWyA56SvqZ";
+        budgetPaymentsStartBlock = 9999999;
 
         DIP0001Window = MAINNET_MAJORITY_DIP0001_WINDOW;
         DIP0001Upgrade = MAINNET_MAJORITY_DIP0001_THRESHOLD;
