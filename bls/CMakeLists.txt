@@ -13,7 +13,7 @@ add_library( # Sets the name of the library.
         # Sets the library as a shared library.
        SHARED
         # Provides a relative path to your source file(s).
-        src/main/cpp/axej-bls-signature-wrapper.cpp)
+        src/main/cpp/dashj-bls-signature-wrapper.cpp)
 
 # Find Java
 

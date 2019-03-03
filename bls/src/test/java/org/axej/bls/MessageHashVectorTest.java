@@ -1,4 +1,4 @@
-package org.axej.bls;
+package org.dashj.bls;
 
 import org.junit.Test;
 

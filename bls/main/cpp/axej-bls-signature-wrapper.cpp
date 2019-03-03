@@ -201,9 +201,9 @@ template <typename T> T SwigValueInit() {
 
 /* Support for throwing Java exceptions */
 typedef enum {
-  SWIG_JavaOutOfMemoryError = 1, 
-  SWIG_JavaIOException, 
-  SWIG_JavaRuntimeException, 
+  SWIG_JavaOutOfMemoryError = 1,
+  SWIG_JavaIOException,
+  SWIG_JavaRuntimeException,
   SWIG_JavaIndexOutOfBoundsException,
   SWIG_JavaArithmeticException,
   SWIG_JavaIllegalArgumentException,
@@ -374,10 +374,10 @@ SWIGINTERN void std_vector_Sl_bls_AggregationInfo_Sg__removeRange(std::vector< b
 extern "C" {
 #endif
 
-SWIGEXPORT jstring JNICALL Java_org_axej_bls_JNI_BLS_1GROUP_1ORDER_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jstring JNICALL Java_org_dashj_bls_JNI_BLS_1GROUP_1ORDER_1get(JNIEnv *jenv, jclass jcls) {
   jstring jresult = 0 ;
   char *result = 0 ;
-  
+
   (void)jenv;
   (void)jcls;
   result = (char *)(char *)bls::BLS::GROUP_ORDER;
@@ -386,131 +386,131 @@ SWIGEXPORT jstring JNICALL Java_org_axej_bls_JNI_BLS_1GROUP_1ORDER_1get(JNIEnv *
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_BLS_1MESSAGE_1HASH_1LEN_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_BLS_1MESSAGE_1HASH_1LEN_1get(JNIEnv *jenv, jclass jcls) {
   jlong jresult = 0 ;
   size_t result;
-  
+
   (void)jenv;
   (void)jcls;
   result = bls::BLS::MESSAGE_HASH_LEN;
-  jresult = (jlong)result; 
+  jresult = (jlong)result;
   return jresult;
 }
 
 
-SWIGEXPORT jboolean JNICALL Java_org_axej_bls_JNI_BLS_1Init(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jboolean JNICALL Java_org_dashj_bls_JNI_BLS_1Init(JNIEnv *jenv, jclass jcls) {
   jboolean jresult = 0 ;
   bool result;
-  
+
   (void)jenv;
   (void)jcls;
   result = (bool)bls::BLS::Init();
-  jresult = (jboolean)result; 
+  jresult = (jboolean)result;
   return jresult;
 }
 #ifdef BUILD_AXE_CORE
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_BLS_1ID_1SIZE_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_BLS_1ID_1SIZE_1get(JNIEnv *jenv, jclass jcls) {
   jlong jresult = 0 ;
   size_t result;
-  
+
   (void)jenv;
   (void)jcls;
   result = bls::BLS::ID_SIZE;
-  jresult = (jlong)result; 
+  jresult = (jlong)result;
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL JJava_org_axej_bls_JNI_BLS_1AssertInitialized(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT void JNICALL JJava_org_dashj_bls_JNI_BLS_1AssertInitialized(JNIEnv *jenv, jclass jcls) {
   (void)jenv;
   (void)jcls;
   bls::BLS::AssertInitialized();
 }
 
 
-SWIGEXPORT void JNICALL Java_org_axej_bls_JNI_BLS_1Clean(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT void JNICALL Java_org_dashj_bls_JNI_BLS_1Clean(JNIEnv *jenv, jclass jcls) {
   (void)jenv;
   (void)jcls;
   bls::BLS::Clean();
 }
 
 
-SWIGEXPORT void JNICALL Java_org_axej_bls_JNI_BLS_1SetSecureAllocator(JNIEnv *jenv, jclass jcls, jlong jarg1, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_org_dashj_bls_JNI_BLS_1SetSecureAllocator(JNIEnv *jenv, jclass jcls, jlong jarg1, jlong jarg2) {
   Util::SecureAllocCallback arg1 ;
   Util::SecureFreeCallback arg2 ;
   Util::SecureAllocCallback *argp1 ;
   Util::SecureFreeCallback *argp2 ;
-  
+
   (void)jenv;
   (void)jcls;
-  argp1 = *(Util::SecureAllocCallback **)&jarg1; 
+  argp1 = *(Util::SecureAllocCallback **)&jarg1;
   if (!argp1) {
     SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null Util::SecureAllocCallback");
     return ;
   }
-  arg1 = *argp1; 
-  argp2 = *(Util::SecureFreeCallback **)&jarg2; 
+  arg1 = *argp1;
+  argp2 = *(Util::SecureFreeCallback **)&jarg2;
   if (!argp2) {
     SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null Util::SecureFreeCallback");
     return ;
   }
-  arg2 = *argp2; 
+  arg2 = *argp2;
   bls::BLS::SetSecureAllocator(arg1,arg2);
 }
 #endif
 
-SWIGEXPORT void JNICALL Java_org_axej_bls_JNI_BLS_1HashPubKeys(JNIEnv *jenv, jclass jcls, jlong jarg1, jlong jarg2, jlong jarg3, jobject jarg3_, jlong jarg4) {
+SWIGEXPORT void JNICALL Java_org_dashj_bls_JNI_BLS_1HashPubKeys(JNIEnv *jenv, jclass jcls, jlong jarg1, jlong jarg2, jlong jarg3, jobject jarg3_, jlong jarg4) {
   bn_t *arg1 = (bn_t *) 0 ;
   size_t arg2 ;
   std::vector< uint8_t * > *arg3 = 0 ;
   std::vector< size_t > *arg4 = 0 ;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg3_;
-  arg1 = *(bn_t **)&jarg1; 
-  arg2 = (size_t)jarg2; 
+  arg1 = *(bn_t **)&jarg1;
+  arg2 = (size_t)jarg2;
   arg3 = *(std::vector< uint8_t * > **)&jarg3;
   if (!arg3) {
     SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< uint8_t * > const & reference is null");
     return ;
-  } 
+  }
   arg4 = *(std::vector< size_t > **)&jarg4;
   if (!arg4) {
     SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< size_t > const & reference is null");
     return ;
-  } 
+  }
   bls::BLS::HashPubKeys(arg1,arg2,(std::vector< unsigned char * > const &)*arg3,(std::vector< size_t > const &)*arg4);
 }
 
 #ifdef BUILD_AXE_CORE
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_BLS_1PrivateKeyShare(JNIEnv *jenv, jclass jcls, jlong jarg1, jbyteArray jarg2) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_BLS_1PrivateKeyShare(JNIEnv *jenv, jclass jcls, jlong jarg1, jbyteArray jarg2) {
   jlong jresult = 0 ;
   std::vector< PrivateKey > *arg1 = 0 ;
   uint8_t *arg2 = (uint8_t *) 0 ;
   PrivateKey result;
-  
+
   (void)jenv;
   (void)jcls;
   arg1 = *(std::vector< PrivateKey > **)&jarg1;
   if (!arg1) {
     SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< PrivateKey > const & reference is null");
     return 0;
-  } 
+  }
   {
     arg2 = (uint8_t *) jenv->GetByteArrayElements(jarg2, 0);
   }
   result = bls::BLS::PrivateKeyShare((std::vector< PrivateKey > const &)*arg1,(unsigned char const *)arg2);
-  *(PrivateKey **)&jresult = new PrivateKey((const PrivateKey &)result); 
+  *(PrivateKey **)&jresult = new PrivateKey((const PrivateKey &)result);
   {
     jenv->ReleaseByteArrayElements(jarg2, (jbyte *) arg2, 0);
   }
-  
+
   return jresult;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_BLS_1RecoverPrivateKey(JNIEnv *jenv, jclass jcls, jlong jarg1, jlong jarg2) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_BLS_1RecoverPrivateKey(JNIEnv *jenv, jclass jcls, jlong jarg1, jlong jarg2) {
   jlong jresult = 0 ;
   std::vector< PrivateKey > *arg1 = 0 ;
   std::vector< uint8_t const * > *arg2 = 0 ;
@@ -533,33 +533,33 @@ SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_BLS_1RecoverPrivateKey(JNIEnv *je
   return jresult;
 }
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_BLS_1PublicKeyShare(JNIEnv *jenv, jclass jcls, jlong jarg1, jbyteArray jarg2) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_BLS_1PublicKeyShare(JNIEnv *jenv, jclass jcls, jlong jarg1, jbyteArray jarg2) {
   jlong jresult = 0 ;
   std::vector< PrivateKey > *arg1 = 0 ;
   uint8_t *arg2 = (uint8_t *) 0 ;
   PrivateKey result;
-  
+
   (void)jenv;
   (void)jcls;
   arg1 = *(std::vector< PrivateKey > **)&jarg1;
   if (!arg1) {
     SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< PrivateKey > const & reference is null");
     return 0;
-  } 
+  }
   {
     arg2 = (uint8_t *) jenv->GetByteArrayElements(jarg2, 0);
   }
   result = bls::BLS::PrivateKeyShare((std::vector< PrivateKey > const &)*arg1,(unsigned char const *)arg2);
-  *(PrivateKey **)&jresult = new PrivateKey((const PrivateKey &)result); 
+  *(PrivateKey **)&jresult = new PrivateKey((const PrivateKey &)result);
   {
     jenv->ReleaseByteArrayElements(jarg2, (jbyte *) arg2, 0);
   }
-  
+
   return jresult;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_BLS_1RecoverPublicKey(JNIEnv *jenv, jclass jcls, jlong jarg1, jlong jarg2) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_BLS_1RecoverPublicKey(JNIEnv *jenv, jclass jcls, jlong jarg1, jlong jarg2) {
   jlong jresult = 0 ;
   std::vector< PublicKey > *arg1 = 0 ;
   std::vector< uint8_t const * > *arg2 = 0 ;
@@ -583,33 +583,33 @@ SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_BLS_1RecoverPublicKey(JNIEnv *jen
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_BLS_1SignatureShare(JNIEnv *jenv, jclass jcls, jlong jarg1, jbyteArray jarg2) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_BLS_1SignatureShare(JNIEnv *jenv, jclass jcls, jlong jarg1, jbyteArray jarg2) {
   jlong jresult = 0 ;
   std::vector< InsecureSignature > *arg1 = 0 ;
   uint8_t *arg2 = (uint8_t *) 0 ;
   InsecureSignature result;
-  
+
   (void)jenv;
   (void)jcls;
   arg1 = *(std::vector< InsecureSignature > **)&jarg1;
   if (!arg1) {
     SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< InsecureSignature > const & reference is null");
     return 0;
-  } 
+  }
   {
     arg2 = (uint8_t *) jenv->GetByteArrayElements(jarg2, 0);
   }
   result = bls::BLS::SignatureShare((std::vector< InsecureSignature > const &)*arg1,(unsigned char const *)arg2);
-  *(InsecureSignature **)&jresult = new InsecureSignature((const InsecureSignature &)result); 
+  *(InsecureSignature **)&jresult = new InsecureSignature((const InsecureSignature &)result);
   {
     jenv->ReleaseByteArrayElements(jarg2, (jbyte *) arg2, 0);
   }
-  
+
   return jresult;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_BLS_1RecoverSig(JNIEnv *jenv, jclass jcls, jlong jarg1, jlong jarg2) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_BLS_1RecoverSig(JNIEnv *jenv, jclass jcls, jlong jarg1, jlong jarg2) {
   jlong jresult = 0 ;
   std::vector< InsecureSignature > *arg1 = 0 ;
   std::vector< uint8_t const * > *arg2 = 0 ;
@@ -633,7 +633,7 @@ SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_BLS_1RecoverSig(JNIEnv *jenv, jcl
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_BLS_1DHKeyExchange(JNIEnv *jenv, jclass jcls, jlong jarg1, jlong jarg2) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_BLS_1DHKeyExchange(JNIEnv *jenv, jclass jcls, jlong jarg1, jlong jarg2) {
   jlong jresult = 0 ;
   PrivateKey *arg1 = 0 ;
   PublicKey *arg2 = 0 ;
@@ -657,72 +657,72 @@ SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_BLS_1DHKeyExchange(JNIEnv *jenv, 
 }
 #endif
 
-SWIGEXPORT void JNICALL Java_org_axej_bls_JNI_BLS_1CheckRelicErrors(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT void JNICALL Java_org_dashj_bls_JNI_BLS_1CheckRelicErrors(JNIEnv *jenv, jclass jcls) {
   (void)jenv;
   (void)jcls;
   bls::BLS::CheckRelicErrors();
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_new_1BLS(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_new_1BLS(JNIEnv *jenv, jclass jcls) {
   jlong jresult = 0 ;
   bls::BLS *result = 0 ;
-  
+
   (void)jenv;
   (void)jcls;
   result = (bls::BLS *)new bls::BLS();
-  *(bls::BLS **)&jresult = result; 
+  *(bls::BLS **)&jresult = result;
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_org_axej_bls_JNI_delete_1BLS(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+SWIGEXPORT void JNICALL Java_org_dashj_bls_JNI_delete_1BLS(JNIEnv *jenv, jclass jcls, jlong jarg1) {
   bls::BLS *arg1 = (bls::BLS *) 0 ;
-  
+
   (void)jenv;
   (void)jcls;
-  arg1 = *(bls::BLS **)&jarg1; 
+  arg1 = *(bls::BLS **)&jarg1;
   delete arg1;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_ChainCode_1CHAIN_1CODE_1SIZE_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_ChainCode_1CHAIN_1CODE_1SIZE_1get(JNIEnv *jenv, jclass jcls) {
   jlong jresult = 0 ;
   size_t result;
-  
+
   (void)jenv;
   (void)jcls;
   result = bls::ChainCode::CHAIN_CODE_SIZE;
-  jresult = (jlong)result; 
+  jresult = (jlong)result;
   return jresult;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_ChainCode_1FromBytes(JNIEnv *jenv, jclass jcls, jbyteArray jarg1) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_ChainCode_1FromBytes(JNIEnv *jenv, jclass jcls, jbyteArray jarg1) {
   jlong jresult = 0 ;
   uint8_t *arg1 = (uint8_t *) 0 ;
   SwigValueWrapper< bls::ChainCode > result;
-  
+
   (void)jenv;
   (void)jcls;
   {
     arg1 = (uint8_t *) jenv->GetByteArrayElements(jarg1, 0);
   }
   result = bls::ChainCode::FromBytes((unsigned char const *)arg1);
-  *(bls::ChainCode **)&jresult = new bls::ChainCode((const bls::ChainCode &)result); 
+  *(bls::ChainCode **)&jresult = new bls::ChainCode((const bls::ChainCode &)result);
   {
     jenv->ReleaseByteArrayElements(jarg1, (jbyte *) arg1, 0);
   }
-  
+
   return jresult;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_new_1ChainCode(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_new_1ChainCode(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   bls::ChainCode *arg1 = 0 ;
   bls::ChainCode *result = 0 ;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
@@ -730,21 +730,21 @@ SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_new_1ChainCode(JNIEnv *jenv, jcla
   if (!arg1) {
     SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "bls::ChainCode const & reference is null");
     return 0;
-  } 
+  }
   result = (bls::ChainCode *)new bls::ChainCode((bls::ChainCode const &)*arg1);
-  *(bls::ChainCode **)&jresult = result; 
+  *(bls::ChainCode **)&jresult = result;
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_org_axej_bls_JNI_ChainCode_1Serialize_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jbyteArray jarg2) {
+SWIGEXPORT void JNICALL Java_org_dashj_bls_JNI_ChainCode_1Serialize_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jbyteArray jarg2) {
   bls::ChainCode *arg1 = (bls::ChainCode *) 0 ;
   uint8_t *arg2 = (uint8_t *) 0 ;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(bls::ChainCode **)&jarg1; 
+  arg1 = *(bls::ChainCode **)&jarg1;
   {
     arg2 = (uint8_t *) jenv->GetByteArrayElements(jarg2, 0);
   }
@@ -752,251 +752,251 @@ SWIGEXPORT void JNICALL Java_org_axej_bls_JNI_ChainCode_1Serialize_1_1SWIG_10(JN
   {
     jenv->ReleaseByteArrayElements(jarg2, (jbyte *) arg2, 0);
   }
-  
+
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_ChainCode_1Serialize_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_ChainCode_1Serialize_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   bls::ChainCode *arg1 = (bls::ChainCode *) 0 ;
   SwigValueWrapper< std::vector< unsigned char > > result;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(bls::ChainCode **)&jarg1; 
+  arg1 = *(bls::ChainCode **)&jarg1;
   result = ((bls::ChainCode const *)arg1)->Serialize();
-  *(std::vector< uint8_t > **)&jresult = new std::vector< uint8_t >((const std::vector< uint8_t > &)result); 
+  *(std::vector< uint8_t > **)&jresult = new std::vector< uint8_t >((const std::vector< uint8_t > &)result);
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_org_axej_bls_JNI_delete_1ChainCode(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+SWIGEXPORT void JNICALL Java_org_dashj_bls_JNI_delete_1ChainCode(JNIEnv *jenv, jclass jcls, jlong jarg1) {
   bls::ChainCode *arg1 = (bls::ChainCode *) 0 ;
-  
+
   (void)jenv;
   (void)jcls;
-  arg1 = *(bls::ChainCode **)&jarg1; 
+  arg1 = *(bls::ChainCode **)&jarg1;
   delete arg1;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_ExtendedPrivateKey_1EXTENDED_1PRIVATE_1KEY_1SIZE_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_ExtendedPrivateKey_1EXTENDED_1PRIVATE_1KEY_1SIZE_1get(JNIEnv *jenv, jclass jcls) {
   jlong jresult = 0 ;
   unsigned int result;
-  
+
   (void)jenv;
   (void)jcls;
   result = (unsigned int)bls::ExtendedPrivateKey::EXTENDED_PRIVATE_KEY_SIZE;
-  jresult = (jlong)result; 
+  jresult = (jlong)result;
   return jresult;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_ExtendedPrivateKey_1FromSeed(JNIEnv *jenv, jclass jcls, jbyteArray jarg1, jlong jarg2) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_ExtendedPrivateKey_1FromSeed(JNIEnv *jenv, jclass jcls, jbyteArray jarg1, jlong jarg2) {
   jlong jresult = 0 ;
   uint8_t *arg1 = (uint8_t *) 0 ;
   size_t arg2 ;
   SwigValueWrapper< bls::ExtendedPrivateKey > result;
-  
+
   (void)jenv;
   (void)jcls;
   {
     arg1 = (uint8_t *) jenv->GetByteArrayElements(jarg1, 0);
   }
-  arg2 = (size_t)jarg2; 
+  arg2 = (size_t)jarg2;
   result = bls::ExtendedPrivateKey::FromSeed((unsigned char const *)arg1,arg2);
-  *(bls::ExtendedPrivateKey **)&jresult = new bls::ExtendedPrivateKey((const bls::ExtendedPrivateKey &)result); 
+  *(bls::ExtendedPrivateKey **)&jresult = new bls::ExtendedPrivateKey((const bls::ExtendedPrivateKey &)result);
   {
     jenv->ReleaseByteArrayElements(jarg1, (jbyte *) arg1, 0);
   }
-  
+
   return jresult;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_ExtendedPrivateKey_1FromBytes(JNIEnv *jenv, jclass jcls, jbyteArray jarg1) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_ExtendedPrivateKey_1FromBytes(JNIEnv *jenv, jclass jcls, jbyteArray jarg1) {
   jlong jresult = 0 ;
   uint8_t *arg1 = (uint8_t *) 0 ;
   SwigValueWrapper< bls::ExtendedPrivateKey > result;
-  
+
   (void)jenv;
   (void)jcls;
   {
     arg1 = (uint8_t *) jenv->GetByteArrayElements(jarg1, 0);
   }
   result = bls::ExtendedPrivateKey::FromBytes((unsigned char const *)arg1);
-  *(bls::ExtendedPrivateKey **)&jresult = new bls::ExtendedPrivateKey((const bls::ExtendedPrivateKey &)result); 
+  *(bls::ExtendedPrivateKey **)&jresult = new bls::ExtendedPrivateKey((const bls::ExtendedPrivateKey &)result);
   {
     jenv->ReleaseByteArrayElements(jarg1, (jbyte *) arg1, 0);
   }
-  
+
   return jresult;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_ExtendedPrivateKey_1PrivateChild(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_ExtendedPrivateKey_1PrivateChild(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
   jlong jresult = 0 ;
   bls::ExtendedPrivateKey *arg1 = (bls::ExtendedPrivateKey *) 0 ;
   uint32_t arg2 ;
   SwigValueWrapper< bls::ExtendedPrivateKey > result;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(bls::ExtendedPrivateKey **)&jarg1; 
-  arg2 = (uint32_t)jarg2; 
+  arg1 = *(bls::ExtendedPrivateKey **)&jarg1;
+  arg2 = (uint32_t)jarg2;
   result = ((bls::ExtendedPrivateKey const *)arg1)->PrivateChild(arg2);
-  *(bls::ExtendedPrivateKey **)&jresult = new bls::ExtendedPrivateKey((const bls::ExtendedPrivateKey &)result); 
+  *(bls::ExtendedPrivateKey **)&jresult = new bls::ExtendedPrivateKey((const bls::ExtendedPrivateKey &)result);
   return jresult;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_ExtendedPrivateKey_1PublicChild(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_ExtendedPrivateKey_1PublicChild(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
   jlong jresult = 0 ;
   bls::ExtendedPrivateKey *arg1 = (bls::ExtendedPrivateKey *) 0 ;
   uint32_t arg2 ;
   SwigValueWrapper< bls::ExtendedPublicKey > result;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(bls::ExtendedPrivateKey **)&jarg1; 
-  arg2 = (uint32_t)jarg2; 
+  arg1 = *(bls::ExtendedPrivateKey **)&jarg1;
+  arg2 = (uint32_t)jarg2;
   result = ((bls::ExtendedPrivateKey const *)arg1)->PublicChild(arg2);
-  *(ExtendedPublicKey **)&jresult = new ExtendedPublicKey((const ExtendedPublicKey &)result); 
+  *(ExtendedPublicKey **)&jresult = new ExtendedPublicKey((const ExtendedPublicKey &)result);
   return jresult;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_ExtendedPrivateKey_1GetVersion(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_ExtendedPrivateKey_1GetVersion(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   bls::ExtendedPrivateKey *arg1 = (bls::ExtendedPrivateKey *) 0 ;
   uint32_t result;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(bls::ExtendedPrivateKey **)&jarg1; 
+  arg1 = *(bls::ExtendedPrivateKey **)&jarg1;
   result = (uint32_t)((bls::ExtendedPrivateKey const *)arg1)->GetVersion();
-  jresult = (jlong)result; 
+  jresult = (jlong)result;
   return jresult;
 }
 
 
-SWIGEXPORT jshort JNICALL Java_org_axej_bls_JNI_ExtendedPrivateKey_1GetDepth(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jshort JNICALL Java_org_dashj_bls_JNI_ExtendedPrivateKey_1GetDepth(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jshort jresult = 0 ;
   bls::ExtendedPrivateKey *arg1 = (bls::ExtendedPrivateKey *) 0 ;
   uint8_t result;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(bls::ExtendedPrivateKey **)&jarg1; 
+  arg1 = *(bls::ExtendedPrivateKey **)&jarg1;
   result = (uint8_t)((bls::ExtendedPrivateKey const *)arg1)->GetDepth();
-  jresult = (jshort)result; 
+  jresult = (jshort)result;
   return jresult;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_ExtendedPrivateKey_1GetParentFingerprint(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_ExtendedPrivateKey_1GetParentFingerprint(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   bls::ExtendedPrivateKey *arg1 = (bls::ExtendedPrivateKey *) 0 ;
   uint32_t result;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(bls::ExtendedPrivateKey **)&jarg1; 
+  arg1 = *(bls::ExtendedPrivateKey **)&jarg1;
   result = (uint32_t)((bls::ExtendedPrivateKey const *)arg1)->GetParentFingerprint();
-  jresult = (jlong)result; 
+  jresult = (jlong)result;
   return jresult;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_ExtendedPrivateKey_1GetChildNumber(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_ExtendedPrivateKey_1GetChildNumber(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   bls::ExtendedPrivateKey *arg1 = (bls::ExtendedPrivateKey *) 0 ;
   uint32_t result;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(bls::ExtendedPrivateKey **)&jarg1; 
+  arg1 = *(bls::ExtendedPrivateKey **)&jarg1;
   result = (uint32_t)((bls::ExtendedPrivateKey const *)arg1)->GetChildNumber();
-  jresult = (jlong)result; 
+  jresult = (jlong)result;
   return jresult;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_ExtendedPrivateKey_1GetChainCode(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_ExtendedPrivateKey_1GetChainCode(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   bls::ExtendedPrivateKey *arg1 = (bls::ExtendedPrivateKey *) 0 ;
   SwigValueWrapper< bls::ChainCode > result;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(bls::ExtendedPrivateKey **)&jarg1; 
+  arg1 = *(bls::ExtendedPrivateKey **)&jarg1;
   result = ((bls::ExtendedPrivateKey const *)arg1)->GetChainCode();
-  *(bls::ChainCode **)&jresult = new bls::ChainCode((const bls::ChainCode &)result); 
+  *(bls::ChainCode **)&jresult = new bls::ChainCode((const bls::ChainCode &)result);
   return jresult;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_ExtendedPrivateKey_1GetPrivateKey(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_ExtendedPrivateKey_1GetPrivateKey(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   bls::ExtendedPrivateKey *arg1 = (bls::ExtendedPrivateKey *) 0 ;
   SwigValueWrapper< bls::PrivateKey > result;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(bls::ExtendedPrivateKey **)&jarg1; 
+  arg1 = *(bls::ExtendedPrivateKey **)&jarg1;
   result = ((bls::ExtendedPrivateKey const *)arg1)->GetPrivateKey();
-  *(PrivateKey **)&jresult = new PrivateKey((const PrivateKey &)result); 
+  *(PrivateKey **)&jresult = new PrivateKey((const PrivateKey &)result);
   return jresult;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_ExtendedPrivateKey_1GetPublicKey(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_ExtendedPrivateKey_1GetPublicKey(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   bls::ExtendedPrivateKey *arg1 = (bls::ExtendedPrivateKey *) 0 ;
   SwigValueWrapper< bls::PublicKey > result;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(bls::ExtendedPrivateKey **)&jarg1; 
+  arg1 = *(bls::ExtendedPrivateKey **)&jarg1;
   result = ((bls::ExtendedPrivateKey const *)arg1)->GetPublicKey();
-  *(PublicKey **)&jresult = new PublicKey((const PublicKey &)result); 
+  *(PublicKey **)&jresult = new PublicKey((const PublicKey &)result);
   return jresult;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_ExtendedPrivateKey_1GetExtendedPublicKey(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_ExtendedPrivateKey_1GetExtendedPublicKey(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   bls::ExtendedPrivateKey *arg1 = (bls::ExtendedPrivateKey *) 0 ;
   SwigValueWrapper< bls::ExtendedPublicKey > result;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(bls::ExtendedPrivateKey **)&jarg1; 
+  arg1 = *(bls::ExtendedPrivateKey **)&jarg1;
   result = ((bls::ExtendedPrivateKey const *)arg1)->GetExtendedPublicKey();
-  *(ExtendedPublicKey **)&jresult = new ExtendedPublicKey((const ExtendedPublicKey &)result); 
+  *(ExtendedPublicKey **)&jresult = new ExtendedPublicKey((const ExtendedPublicKey &)result);
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_org_axej_bls_JNI_ExtendedPrivateKey_1Serialize_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jbyteArray jarg2) {
+SWIGEXPORT void JNICALL Java_org_dashj_bls_JNI_ExtendedPrivateKey_1Serialize_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jbyteArray jarg2) {
   bls::ExtendedPrivateKey *arg1 = (bls::ExtendedPrivateKey *) 0 ;
   uint8_t *arg2 = (uint8_t *) 0 ;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(bls::ExtendedPrivateKey **)&jarg1; 
+  arg1 = *(bls::ExtendedPrivateKey **)&jarg1;
   {
     arg2 = (uint8_t *) jenv->GetByteArrayElements(jarg2, 0);
   }
@@ -1004,194 +1004,194 @@ SWIGEXPORT void JNICALL Java_org_axej_bls_JNI_ExtendedPrivateKey_1Serialize_1_1S
   {
     jenv->ReleaseByteArrayElements(jarg2, (jbyte *) arg2, 0);
   }
-  
+
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_ExtendedPrivateKey_1Serialize_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_ExtendedPrivateKey_1Serialize_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   bls::ExtendedPrivateKey *arg1 = (bls::ExtendedPrivateKey *) 0 ;
   SwigValueWrapper< std::vector< unsigned char > > result;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(bls::ExtendedPrivateKey **)&jarg1; 
+  arg1 = *(bls::ExtendedPrivateKey **)&jarg1;
   result = ((bls::ExtendedPrivateKey const *)arg1)->Serialize();
-  *(std::vector< uint8_t > **)&jresult = new std::vector< uint8_t >((const std::vector< uint8_t > &)result); 
+  *(std::vector< uint8_t > **)&jresult = new std::vector< uint8_t >((const std::vector< uint8_t > &)result);
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_org_axej_bls_JNI_delete_1ExtendedPrivateKey(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+SWIGEXPORT void JNICALL Java_org_dashj_bls_JNI_delete_1ExtendedPrivateKey(JNIEnv *jenv, jclass jcls, jlong jarg1) {
   bls::ExtendedPrivateKey *arg1 = (bls::ExtendedPrivateKey *) 0 ;
-  
+
   (void)jenv;
   (void)jcls;
-  arg1 = *(bls::ExtendedPrivateKey **)&jarg1; 
+  arg1 = *(bls::ExtendedPrivateKey **)&jarg1;
   delete arg1;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_ExtendedPublicKey_1VERSION_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_ExtendedPublicKey_1VERSION_1get(JNIEnv *jenv, jclass jcls) {
   jlong jresult = 0 ;
   unsigned int result;
-  
+
   (void)jenv;
   (void)jcls;
   result = (unsigned int)bls::ExtendedPublicKey::VERSION;
-  jresult = (jlong)result; 
+  jresult = (jlong)result;
   return jresult;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_ExtendedPublicKey_1EXTENDED_1PUBLIC_1KEY_1SIZE_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_ExtendedPublicKey_1EXTENDED_1PUBLIC_1KEY_1SIZE_1get(JNIEnv *jenv, jclass jcls) {
   jlong jresult = 0 ;
   unsigned int result;
-  
+
   (void)jenv;
   (void)jcls;
   result = (unsigned int)bls::ExtendedPublicKey::EXTENDED_PUBLIC_KEY_SIZE;
-  jresult = (jlong)result; 
+  jresult = (jlong)result;
   return jresult;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_ExtendedPublicKey_1FromBytes(JNIEnv *jenv, jclass jcls, jbyteArray jarg1) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_ExtendedPublicKey_1FromBytes(JNIEnv *jenv, jclass jcls, jbyteArray jarg1) {
   jlong jresult = 0 ;
   uint8_t *arg1 = (uint8_t *) 0 ;
   SwigValueWrapper< bls::ExtendedPublicKey > result;
-  
+
   (void)jenv;
   (void)jcls;
   {
     arg1 = (uint8_t *) jenv->GetByteArrayElements(jarg1, 0);
   }
   result = bls::ExtendedPublicKey::FromBytes((unsigned char const *)arg1);
-  *(bls::ExtendedPublicKey **)&jresult = new bls::ExtendedPublicKey((const bls::ExtendedPublicKey &)result); 
+  *(bls::ExtendedPublicKey **)&jresult = new bls::ExtendedPublicKey((const bls::ExtendedPublicKey &)result);
   {
     jenv->ReleaseByteArrayElements(jarg1, (jbyte *) arg1, 0);
   }
-  
+
   return jresult;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_ExtendedPublicKey_1PublicChild(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_ExtendedPublicKey_1PublicChild(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
   jlong jresult = 0 ;
   bls::ExtendedPublicKey *arg1 = (bls::ExtendedPublicKey *) 0 ;
   uint32_t arg2 ;
   SwigValueWrapper< bls::ExtendedPublicKey > result;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(bls::ExtendedPublicKey **)&jarg1; 
-  arg2 = (uint32_t)jarg2; 
+  arg1 = *(bls::ExtendedPublicKey **)&jarg1;
+  arg2 = (uint32_t)jarg2;
   result = ((bls::ExtendedPublicKey const *)arg1)->PublicChild(arg2);
-  *(bls::ExtendedPublicKey **)&jresult = new bls::ExtendedPublicKey((const bls::ExtendedPublicKey &)result); 
+  *(bls::ExtendedPublicKey **)&jresult = new bls::ExtendedPublicKey((const bls::ExtendedPublicKey &)result);
   return jresult;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_ExtendedPublicKey_1GetVersion(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_ExtendedPublicKey_1GetVersion(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   bls::ExtendedPublicKey *arg1 = (bls::ExtendedPublicKey *) 0 ;
   uint32_t result;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(bls::ExtendedPublicKey **)&jarg1; 
+  arg1 = *(bls::ExtendedPublicKey **)&jarg1;
   result = (uint32_t)((bls::ExtendedPublicKey const *)arg1)->GetVersion();
-  jresult = (jlong)result; 
+  jresult = (jlong)result;
   return jresult;
 }
 
 
-SWIGEXPORT jshort JNICALL Java_org_axej_bls_JNI_ExtendedPublicKey_1GetDepth(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jshort JNICALL Java_org_dashj_bls_JNI_ExtendedPublicKey_1GetDepth(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jshort jresult = 0 ;
   bls::ExtendedPublicKey *arg1 = (bls::ExtendedPublicKey *) 0 ;
   uint8_t result;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(bls::ExtendedPublicKey **)&jarg1; 
+  arg1 = *(bls::ExtendedPublicKey **)&jarg1;
   result = (uint8_t)((bls::ExtendedPublicKey const *)arg1)->GetDepth();
-  jresult = (jshort)result; 
+  jresult = (jshort)result;
   return jresult;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_ExtendedPublicKey_1GetParentFingerprint(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_ExtendedPublicKey_1GetParentFingerprint(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   bls::ExtendedPublicKey *arg1 = (bls::ExtendedPublicKey *) 0 ;
   uint32_t result;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(bls::ExtendedPublicKey **)&jarg1; 
+  arg1 = *(bls::ExtendedPublicKey **)&jarg1;
   result = (uint32_t)((bls::ExtendedPublicKey const *)arg1)->GetParentFingerprint();
-  jresult = (jlong)result; 
+  jresult = (jlong)result;
   return jresult;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_ExtendedPublicKey_1GetChildNumber(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_ExtendedPublicKey_1GetChildNumber(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   bls::ExtendedPublicKey *arg1 = (bls::ExtendedPublicKey *) 0 ;
   uint32_t result;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(bls::ExtendedPublicKey **)&jarg1; 
+  arg1 = *(bls::ExtendedPublicKey **)&jarg1;
   result = (uint32_t)((bls::ExtendedPublicKey const *)arg1)->GetChildNumber();
-  jresult = (jlong)result; 
+  jresult = (jlong)result;
   return jresult;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_ExtendedPublicKey_1GetChainCode(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_ExtendedPublicKey_1GetChainCode(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   bls::ExtendedPublicKey *arg1 = (bls::ExtendedPublicKey *) 0 ;
   SwigValueWrapper< bls::ChainCode > result;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(bls::ExtendedPublicKey **)&jarg1; 
+  arg1 = *(bls::ExtendedPublicKey **)&jarg1;
   result = ((bls::ExtendedPublicKey const *)arg1)->GetChainCode();
-  *(bls::ChainCode **)&jresult = new bls::ChainCode((const bls::ChainCode &)result); 
+  *(bls::ChainCode **)&jresult = new bls::ChainCode((const bls::ChainCode &)result);
   return jresult;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_ExtendedPublicKey_1GetPublicKey(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_ExtendedPublicKey_1GetPublicKey(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   bls::ExtendedPublicKey *arg1 = (bls::ExtendedPublicKey *) 0 ;
   SwigValueWrapper< bls::PublicKey > result;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(bls::ExtendedPublicKey **)&jarg1; 
+  arg1 = *(bls::ExtendedPublicKey **)&jarg1;
   result = ((bls::ExtendedPublicKey const *)arg1)->GetPublicKey();
-  *(PublicKey **)&jresult = new PublicKey((const PublicKey &)result); 
+  *(PublicKey **)&jresult = new PublicKey((const PublicKey &)result);
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_org_axej_bls_JNI_ExtendedPublicKey_1Serialize_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jbyteArray jarg2) {
+SWIGEXPORT void JNICALL Java_org_dashj_bls_JNI_ExtendedPublicKey_1Serialize_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jbyteArray jarg2) {
   bls::ExtendedPublicKey *arg1 = (bls::ExtendedPublicKey *) 0 ;
   uint8_t *arg2 = (uint8_t *) 0 ;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(bls::ExtendedPublicKey **)&jarg1; 
+  arg1 = *(bls::ExtendedPublicKey **)&jarg1;
   {
     arg2 = (uint8_t *) jenv->GetByteArrayElements(jarg2, 0);
   }
@@ -1199,116 +1199,116 @@ SWIGEXPORT void JNICALL Java_org_axej_bls_JNI_ExtendedPublicKey_1Serialize_1_1SW
   {
     jenv->ReleaseByteArrayElements(jarg2, (jbyte *) arg2, 0);
   }
-  
+
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_ExtendedPublicKey_1Serialize_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_ExtendedPublicKey_1Serialize_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   bls::ExtendedPublicKey *arg1 = (bls::ExtendedPublicKey *) 0 ;
   SwigValueWrapper< std::vector< unsigned char > > result;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(bls::ExtendedPublicKey **)&jarg1; 
+  arg1 = *(bls::ExtendedPublicKey **)&jarg1;
   result = ((bls::ExtendedPublicKey const *)arg1)->Serialize();
-  *(std::vector< uint8_t > **)&jresult = new std::vector< uint8_t >((const std::vector< uint8_t > &)result); 
+  *(std::vector< uint8_t > **)&jresult = new std::vector< uint8_t >((const std::vector< uint8_t > &)result);
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_org_axej_bls_JNI_delete_1ExtendedPublicKey(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+SWIGEXPORT void JNICALL Java_org_dashj_bls_JNI_delete_1ExtendedPublicKey(JNIEnv *jenv, jclass jcls, jlong jarg1) {
   bls::ExtendedPublicKey *arg1 = (bls::ExtendedPublicKey *) 0 ;
-  
+
   (void)jenv;
   (void)jcls;
-  arg1 = *(bls::ExtendedPublicKey **)&jarg1; 
+  arg1 = *(bls::ExtendedPublicKey **)&jarg1;
   delete arg1;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_PrivateKey_1PRIVATE_1KEY_1SIZE_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_PrivateKey_1PRIVATE_1KEY_1SIZE_1get(JNIEnv *jenv, jclass jcls) {
   jlong jresult = 0 ;
   size_t result;
-  
+
   (void)jenv;
   (void)jcls;
   result = bls::PrivateKey::PRIVATE_KEY_SIZE;
-  jresult = (jlong)result; 
+  jresult = (jlong)result;
   return jresult;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_PrivateKey_1FromSeed(JNIEnv *jenv, jclass jcls, jbyteArray jarg1, jlong jarg2) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_PrivateKey_1FromSeed(JNIEnv *jenv, jclass jcls, jbyteArray jarg1, jlong jarg2) {
   jlong jresult = 0 ;
   uint8_t *arg1 = (uint8_t *) 0 ;
   size_t arg2 ;
   SwigValueWrapper< bls::PrivateKey > result;
-  
+
   (void)jenv;
   (void)jcls;
   {
     arg1 = (uint8_t *) jenv->GetByteArrayElements(jarg1, 0);
   }
-  arg2 = (size_t)jarg2; 
+  arg2 = (size_t)jarg2;
   result = bls::PrivateKey::FromSeed((unsigned char const *)arg1,arg2);
-  *(bls::PrivateKey **)&jresult = new bls::PrivateKey((const bls::PrivateKey &)result); 
+  *(bls::PrivateKey **)&jresult = new bls::PrivateKey((const bls::PrivateKey &)result);
   {
     jenv->ReleaseByteArrayElements(jarg1, (jbyte *) arg1, 0);
   }
-  
+
   return jresult;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_PrivateKey_1FromBytes_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jbyteArray jarg1, jboolean jarg2) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_PrivateKey_1FromBytes_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jbyteArray jarg1, jboolean jarg2) {
   jlong jresult = 0 ;
   uint8_t *arg1 = (uint8_t *) 0 ;
   bool arg2 ;
   SwigValueWrapper< bls::PrivateKey > result;
-  
+
   (void)jenv;
   (void)jcls;
   {
     arg1 = (uint8_t *) jenv->GetByteArrayElements(jarg1, 0);
   }
-  arg2 = jarg2 ? true : false; 
+  arg2 = jarg2 ? true : false;
   result = bls::PrivateKey::FromBytes((unsigned char const *)arg1,arg2);
-  *(bls::PrivateKey **)&jresult = new bls::PrivateKey((const bls::PrivateKey &)result); 
+  *(bls::PrivateKey **)&jresult = new bls::PrivateKey((const bls::PrivateKey &)result);
   {
     jenv->ReleaseByteArrayElements(jarg1, (jbyte *) arg1, 0);
   }
-  
+
   return jresult;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_PrivateKey_1FromBytes_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jbyteArray jarg1) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_PrivateKey_1FromBytes_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jbyteArray jarg1) {
   jlong jresult = 0 ;
   uint8_t *arg1 = (uint8_t *) 0 ;
   SwigValueWrapper< bls::PrivateKey > result;
-  
+
   (void)jenv;
   (void)jcls;
   {
     arg1 = (uint8_t *) jenv->GetByteArrayElements(jarg1, 0);
   }
   result = bls::PrivateKey::FromBytes((unsigned char const *)arg1);
-  *(bls::PrivateKey **)&jresult = new bls::PrivateKey((const bls::PrivateKey &)result); 
+  *(bls::PrivateKey **)&jresult = new bls::PrivateKey((const bls::PrivateKey &)result);
   {
     jenv->ReleaseByteArrayElements(jarg1, (jbyte *) arg1, 0);
   }
-  
+
   return jresult;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_new_1PrivateKey_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_new_1PrivateKey_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   bls::PrivateKey *arg1 = 0 ;
   bls::PrivateKey *result = 0 ;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
@@ -1316,43 +1316,43 @@ SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_new_1PrivateKey_1_1SWIG_10(JNIEnv
   if (!arg1) {
     SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "bls::PrivateKey const & reference is null");
     return 0;
-  } 
+  }
   result = (bls::PrivateKey *)new bls::PrivateKey((bls::PrivateKey const &)*arg1);
-  *(bls::PrivateKey **)&jresult = result; 
+  *(bls::PrivateKey **)&jresult = result;
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_org_axej_bls_JNI_delete_1PrivateKey(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+SWIGEXPORT void JNICALL Java_org_dashj_bls_JNI_delete_1PrivateKey(JNIEnv *jenv, jclass jcls, jlong jarg1) {
   bls::PrivateKey *arg1 = (bls::PrivateKey *) 0 ;
-  
+
   (void)jenv;
   (void)jcls;
-  arg1 = *(bls::PrivateKey **)&jarg1; 
+  arg1 = *(bls::PrivateKey **)&jarg1;
   delete arg1;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_PrivateKey_1GetPublicKey(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_PrivateKey_1GetPublicKey(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   bls::PrivateKey *arg1 = (bls::PrivateKey *) 0 ;
   SwigValueWrapper< bls::PublicKey > result;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(bls::PrivateKey **)&jarg1; 
+  arg1 = *(bls::PrivateKey **)&jarg1;
   result = ((bls::PrivateKey const *)arg1)->GetPublicKey();
-  *(PublicKey **)&jresult = new PublicKey((const PublicKey &)result); 
+  *(PublicKey **)&jresult = new PublicKey((const PublicKey &)result);
   return jresult;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_PrivateKey_1AggregateInsecure(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_PrivateKey_1AggregateInsecure(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   std::vector< bls::PrivateKey > *arg1 = 0 ;
   SwigValueWrapper< bls::PrivateKey > result;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
@@ -1360,19 +1360,19 @@ SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_PrivateKey_1AggregateInsecure(JNI
   if (!arg1) {
     SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< bls::PrivateKey > const & reference is null");
     return 0;
-  } 
+  }
   result = bls::PrivateKey::AggregateInsecure((std::vector< bls::PrivateKey > const &)*arg1);
-  *(bls::PrivateKey **)&jresult = new bls::PrivateKey((const bls::PrivateKey &)result); 
+  *(bls::PrivateKey **)&jresult = new bls::PrivateKey((const bls::PrivateKey &)result);
   return jresult;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_PrivateKey_1Aggregate(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_PrivateKey_1Aggregate(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
   jlong jresult = 0 ;
   std::vector< bls::PrivateKey > *arg1 = 0 ;
   std::vector< PublicKey > *arg2 = 0 ;
   SwigValueWrapper< bls::PrivateKey > result;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
@@ -1380,26 +1380,26 @@ SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_PrivateKey_1Aggregate(JNIEnv *jen
   if (!arg1) {
     SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< bls::PrivateKey > const & reference is null");
     return 0;
-  } 
+  }
   arg2 = *(std::vector< PublicKey > **)&jarg2;
   if (!arg2) {
     SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< PublicKey > const & reference is null");
     return 0;
-  } 
+  }
   result = bls::PrivateKey::Aggregate((std::vector< bls::PrivateKey > const &)*arg1,(std::vector< PublicKey > const &)*arg2);
-  *(bls::PrivateKey **)&jresult = new bls::PrivateKey((const bls::PrivateKey &)result); 
+  *(bls::PrivateKey **)&jresult = new bls::PrivateKey((const bls::PrivateKey &)result);
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_org_axej_bls_JNI_PrivateKey_1Serialize_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jbyteArray jarg2) {
+SWIGEXPORT void JNICALL Java_org_dashj_bls_JNI_PrivateKey_1Serialize_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jbyteArray jarg2) {
   bls::PrivateKey *arg1 = (bls::PrivateKey *) 0 ;
   uint8_t *arg2 = (uint8_t *) 0 ;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(bls::PrivateKey **)&jarg1; 
+  arg1 = *(bls::PrivateKey **)&jarg1;
   {
     arg2 = (uint8_t *) jenv->GetByteArrayElements(jarg2, 0);
   }
@@ -1407,172 +1407,172 @@ SWIGEXPORT void JNICALL Java_org_axej_bls_JNI_PrivateKey_1Serialize_1_1SWIG_10(J
   {
     jenv->ReleaseByteArrayElements(jarg2, (jbyte *) arg2, 0);
   }
-  
+
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_PrivateKey_1Serialize_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_PrivateKey_1Serialize_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   bls::PrivateKey *arg1 = (bls::PrivateKey *) 0 ;
   SwigValueWrapper< std::vector< unsigned char > > result;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(bls::PrivateKey **)&jarg1; 
+  arg1 = *(bls::PrivateKey **)&jarg1;
   result = ((bls::PrivateKey const *)arg1)->Serialize();
-  *(std::vector< uint8_t > **)&jresult = new std::vector< uint8_t >((const std::vector< uint8_t > &)result); 
+  *(std::vector< uint8_t > **)&jresult = new std::vector< uint8_t >((const std::vector< uint8_t > &)result);
   return jresult;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_PrivateKey_1SignInsecure(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jbyteArray jarg2, jlong jarg3) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_PrivateKey_1SignInsecure(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jbyteArray jarg2, jlong jarg3) {
   jlong jresult = 0 ;
   bls::PrivateKey *arg1 = (bls::PrivateKey *) 0 ;
   uint8_t *arg2 = (uint8_t *) 0 ;
   size_t arg3 ;
   SwigValueWrapper< bls::InsecureSignature > result;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(bls::PrivateKey **)&jarg1; 
+  arg1 = *(bls::PrivateKey **)&jarg1;
   {
     arg2 = (uint8_t *) jenv->GetByteArrayElements(jarg2, 0);
   }
-  arg3 = (size_t)jarg3; 
+  arg3 = (size_t)jarg3;
   result = ((bls::PrivateKey const *)arg1)->SignInsecure((uint8_t const *)arg2,arg3);
-  *(InsecureSignature **)&jresult = new InsecureSignature((const InsecureSignature &)result); 
+  *(InsecureSignature **)&jresult = new InsecureSignature((const InsecureSignature &)result);
   {
     jenv->ReleaseByteArrayElements(jarg2, (jbyte *) arg2, 0);
   }
-  
+
   return jresult;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_PrivateKey_1SignInsecurePrehashed(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jbyteArray jarg2) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_PrivateKey_1SignInsecurePrehashed(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jbyteArray jarg2) {
   jlong jresult = 0 ;
   bls::PrivateKey *arg1 = (bls::PrivateKey *) 0 ;
   uint8_t *arg2 = (uint8_t *) 0 ;
   SwigValueWrapper< bls::InsecureSignature > result;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(bls::PrivateKey **)&jarg1; 
+  arg1 = *(bls::PrivateKey **)&jarg1;
   {
     arg2 = (uint8_t *) jenv->GetByteArrayElements(jarg2, 0);
   }
   result = ((bls::PrivateKey const *)arg1)->SignInsecurePrehashed((uint8_t const *)arg2);
-  *(InsecureSignature **)&jresult = new InsecureSignature((const InsecureSignature &)result); 
+  *(InsecureSignature **)&jresult = new InsecureSignature((const InsecureSignature &)result);
   {
     jenv->ReleaseByteArrayElements(jarg2, (jbyte *) arg2, 0);
   }
-  
+
   return jresult;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_PrivateKey_1Sign(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jbyteArray jarg2, jlong jarg3) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_PrivateKey_1Sign(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jbyteArray jarg2, jlong jarg3) {
   jlong jresult = 0 ;
   bls::PrivateKey *arg1 = (bls::PrivateKey *) 0 ;
   uint8_t *arg2 = (uint8_t *) 0 ;
   size_t arg3 ;
   SwigValueWrapper< bls::Signature > result;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(bls::PrivateKey **)&jarg1; 
+  arg1 = *(bls::PrivateKey **)&jarg1;
   {
     arg2 = (uint8_t *) jenv->GetByteArrayElements(jarg2, 0);
   }
-  arg3 = (size_t)jarg3; 
+  arg3 = (size_t)jarg3;
   result = ((bls::PrivateKey const *)arg1)->Sign((uint8_t const *)arg2,arg3);
-  *(Signature **)&jresult = new Signature((const Signature &)result); 
+  *(Signature **)&jresult = new Signature((const Signature &)result);
   {
     jenv->ReleaseByteArrayElements(jarg2, (jbyte *) arg2, 0);
   }
-  
+
   return jresult;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_PrivateKey_1SignPrehashed(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jbyteArray jarg2) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_PrivateKey_1SignPrehashed(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jbyteArray jarg2) {
   jlong jresult = 0 ;
   bls::PrivateKey *arg1 = (bls::PrivateKey *) 0 ;
   uint8_t *arg2 = (uint8_t *) 0 ;
   SwigValueWrapper< bls::Signature > result;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(bls::PrivateKey **)&jarg1; 
+  arg1 = *(bls::PrivateKey **)&jarg1;
   {
     arg2 = (uint8_t *) jenv->GetByteArrayElements(jarg2, 0);
   }
   result = ((bls::PrivateKey const *)arg1)->SignPrehashed((uint8_t const *)arg2);
-  *(Signature **)&jresult = new Signature((const Signature &)result); 
+  *(Signature **)&jresult = new Signature((const Signature &)result);
   {
     jenv->ReleaseByteArrayElements(jarg2, (jbyte *) arg2, 0);
   }
-  
+
   return jresult;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_PublicKey_1PUBLIC_1KEY_1SIZE_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_PublicKey_1PUBLIC_1KEY_1SIZE_1get(JNIEnv *jenv, jclass jcls) {
   jlong jresult = 0 ;
   size_t result;
-  
+
   (void)jenv;
   (void)jcls;
   result = bls::PublicKey::PUBLIC_KEY_SIZE;
-  jresult = (jlong)result; 
+  jresult = (jlong)result;
   return jresult;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_PublicKey_1FromBytes(JNIEnv *jenv, jclass jcls, jbyteArray jarg1) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_PublicKey_1FromBytes(JNIEnv *jenv, jclass jcls, jbyteArray jarg1) {
   jlong jresult = 0 ;
   uint8_t *arg1 = (uint8_t *) 0 ;
   SwigValueWrapper< bls::PublicKey > result;
-  
+
   (void)jenv;
   (void)jcls;
   {
     arg1 = (uint8_t *) jenv->GetByteArrayElements(jarg1, 0);
   }
   result = bls::PublicKey::FromBytes((unsigned char const *)arg1);
-  *(bls::PublicKey **)&jresult = new bls::PublicKey((const bls::PublicKey &)result); 
+  *(bls::PublicKey **)&jresult = new bls::PublicKey((const bls::PublicKey &)result);
   {
     jenv->ReleaseByteArrayElements(jarg1, (jbyte *) arg1, 0);
   }
-  
+
   return jresult;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_PublicKey_1FromG1(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_PublicKey_1FromG1(JNIEnv *jenv, jclass jcls, jlong jarg1) {
   jlong jresult = 0 ;
   g1_t *arg1 = (g1_t *) 0 ;
   SwigValueWrapper< bls::PublicKey > result;
-  
+
   (void)jenv;
   (void)jcls;
-  arg1 = *(g1_t **)&jarg1; 
+  arg1 = *(g1_t **)&jarg1;
   result = bls::PublicKey::FromG1((g1_t const *)arg1);
-  *(bls::PublicKey **)&jresult = new bls::PublicKey((const bls::PublicKey &)result); 
+  *(bls::PublicKey **)&jresult = new bls::PublicKey((const bls::PublicKey &)result);
   return jresult;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_new_1PublicKey(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_new_1PublicKey(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   bls::PublicKey *arg1 = 0 ;
   bls::PublicKey *result = 0 ;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
@@ -1580,18 +1580,18 @@ SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_new_1PublicKey(JNIEnv *jenv, jcla
   if (!arg1) {
     SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "bls::PublicKey const & reference is null");
     return 0;
-  } 
+  }
   result = (bls::PublicKey *)new bls::PublicKey((bls::PublicKey const &)*arg1);
-  *(bls::PublicKey **)&jresult = result; 
+  *(bls::PublicKey **)&jresult = result;
   return jresult;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_PublicKey_1AggregateInsecure(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_PublicKey_1AggregateInsecure(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   std::vector< bls::PublicKey > *arg1 = 0 ;
   SwigValueWrapper< bls::PublicKey > result;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
@@ -1599,18 +1599,18 @@ SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_PublicKey_1AggregateInsecure(JNIE
   if (!arg1) {
     SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< bls::PublicKey > const & reference is null");
     return 0;
-  } 
+  }
   result = bls::PublicKey::AggregateInsecure((std::vector< bls::PublicKey > const &)*arg1);
-  *(bls::PublicKey **)&jresult = new bls::PublicKey((const bls::PublicKey &)result); 
+  *(bls::PublicKey **)&jresult = new bls::PublicKey((const bls::PublicKey &)result);
   return jresult;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_PublicKey_1Aggregate(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_PublicKey_1Aggregate(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   std::vector< bls::PublicKey > *arg1 = 0 ;
   SwigValueWrapper< bls::PublicKey > result;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
@@ -1618,21 +1618,21 @@ SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_PublicKey_1Aggregate(JNIEnv *jenv
   if (!arg1) {
     SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< bls::PublicKey > const & reference is null");
     return 0;
-  } 
+  }
   result = bls::PublicKey::Aggregate((std::vector< bls::PublicKey > const &)*arg1);
-  *(bls::PublicKey **)&jresult = new bls::PublicKey((const bls::PublicKey &)result); 
+  *(bls::PublicKey **)&jresult = new bls::PublicKey((const bls::PublicKey &)result);
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_org_axej_bls_JNI_PublicKey_1Serialize_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jbyteArray jarg2) {
+SWIGEXPORT void JNICALL Java_org_dashj_bls_JNI_PublicKey_1Serialize_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jbyteArray jarg2) {
   bls::PublicKey *arg1 = (bls::PublicKey *) 0 ;
   uint8_t *arg2 = (uint8_t *) 0 ;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(bls::PublicKey **)&jarg1; 
+  arg1 = *(bls::PublicKey **)&jarg1;
   {
     arg2 = (uint8_t *) jenv->GetByteArrayElements(jarg2, 0);
   }
@@ -1640,101 +1640,101 @@ SWIGEXPORT void JNICALL Java_org_axej_bls_JNI_PublicKey_1Serialize_1_1SWIG_10(JN
   {
     jenv->ReleaseByteArrayElements(jarg2, (jbyte *) arg2, 0);
   }
-  
+
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_PublicKey_1Serialize_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_PublicKey_1Serialize_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   bls::PublicKey *arg1 = (bls::PublicKey *) 0 ;
   SwigValueWrapper< std::vector< unsigned char > > result;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(bls::PublicKey **)&jarg1; 
+  arg1 = *(bls::PublicKey **)&jarg1;
   result = ((bls::PublicKey const *)arg1)->Serialize();
-  *(std::vector< uint8_t > **)&jresult = new std::vector< uint8_t >((const std::vector< uint8_t > &)result); 
+  *(std::vector< uint8_t > **)&jresult = new std::vector< uint8_t >((const std::vector< uint8_t > &)result);
   return jresult;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_PublicKey_1GetFingerprint(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_PublicKey_1GetFingerprint(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   bls::PublicKey *arg1 = (bls::PublicKey *) 0 ;
   uint32_t result;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(bls::PublicKey **)&jarg1; 
+  arg1 = *(bls::PublicKey **)&jarg1;
   result = (uint32_t)((bls::PublicKey const *)arg1)->GetFingerprint();
-  jresult = (jlong)result; 
+  jresult = (jlong)result;
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_org_axej_bls_JNI_delete_1PublicKey(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+SWIGEXPORT void JNICALL Java_org_dashj_bls_JNI_delete_1PublicKey(JNIEnv *jenv, jclass jcls, jlong jarg1) {
   bls::PublicKey *arg1 = (bls::PublicKey *) 0 ;
-  
+
   (void)jenv;
   (void)jcls;
-  arg1 = *(bls::PublicKey **)&jarg1; 
+  arg1 = *(bls::PublicKey **)&jarg1;
   delete arg1;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_InsecureSignature_1SIGNATURE_1SIZE_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_InsecureSignature_1SIGNATURE_1SIZE_1get(JNIEnv *jenv, jclass jcls) {
   jlong jresult = 0 ;
   size_t result;
-  
+
   (void)jenv;
   (void)jcls;
   result = bls::InsecureSignature::SIGNATURE_SIZE;
-  jresult = (jlong)result; 
+  jresult = (jlong)result;
   return jresult;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_InsecureSignature_1FromBytes(JNIEnv *jenv, jclass jcls, jbyteArray jarg1) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_InsecureSignature_1FromBytes(JNIEnv *jenv, jclass jcls, jbyteArray jarg1) {
   jlong jresult = 0 ;
   uint8_t *arg1 = (uint8_t *) 0 ;
   SwigValueWrapper< bls::InsecureSignature > result;
-  
+
   (void)jenv;
   (void)jcls;
   {
     arg1 = (uint8_t *) jenv->GetByteArrayElements(jarg1, 0);
   }
   result = bls::InsecureSignature::FromBytes((unsigned char const *)arg1);
-  *(bls::InsecureSignature **)&jresult = new bls::InsecureSignature((const bls::InsecureSignature &)result); 
+  *(bls::InsecureSignature **)&jresult = new bls::InsecureSignature((const bls::InsecureSignature &)result);
   {
     jenv->ReleaseByteArrayElements(jarg1, (jbyte *) arg1, 0);
   }
-  
+
   return jresult;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_InsecureSignature_1FromG2(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_InsecureSignature_1FromG2(JNIEnv *jenv, jclass jcls, jlong jarg1) {
   jlong jresult = 0 ;
   g2_t *arg1 = (g2_t *) 0 ;
   SwigValueWrapper< bls::InsecureSignature > result;
-  
+
   (void)jenv;
   (void)jcls;
-  arg1 = *(g2_t **)&jarg1; 
+  arg1 = *(g2_t **)&jarg1;
   result = bls::InsecureSignature::FromG2((g2_t const *)arg1);
-  *(bls::InsecureSignature **)&jresult = new bls::InsecureSignature((const bls::InsecureSignature &)result); 
+  *(bls::InsecureSignature **)&jresult = new bls::InsecureSignature((const bls::InsecureSignature &)result);
   return jresult;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_new_1InsecureSignature(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_new_1InsecureSignature(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   bls::InsecureSignature *arg1 = 0 ;
   bls::InsecureSignature *result = 0 ;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
@@ -1742,88 +1742,88 @@ SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_new_1InsecureSignature(JNIEnv *je
   if (!arg1) {
     SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "bls::InsecureSignature const & reference is null");
     return 0;
-  } 
+  }
   result = (bls::InsecureSignature *)new bls::InsecureSignature((bls::InsecureSignature const &)*arg1);
-  *(bls::InsecureSignature **)&jresult = result; 
+  *(bls::InsecureSignature **)&jresult = result;
   return jresult;
 }
 
 
-SWIGEXPORT jboolean JNICALL Java_org_axej_bls_JNI_InsecureSignature_1Verify(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jlong jarg3, jobject jarg3_) {
+SWIGEXPORT jboolean JNICALL Java_org_dashj_bls_JNI_InsecureSignature_1Verify(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jlong jarg3, jobject jarg3_) {
   jboolean jresult = 0 ;
   bls::InsecureSignature *arg1 = (bls::InsecureSignature *) 0 ;
   std::vector< uint8_t const * > *arg2 = 0 ;
   std::vector< bls::PublicKey > *arg3 = 0 ;
   bool result;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   (void)jarg3_;
-  arg1 = *(bls::InsecureSignature **)&jarg1; 
+  arg1 = *(bls::InsecureSignature **)&jarg1;
   arg2 = *(std::vector< uint8_t const * > **)&jarg2;
   if (!arg2) {
     SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< uint8_t const * > const & reference is null");
     return 0;
-  } 
+  }
   arg3 = *(std::vector< bls::PublicKey > **)&jarg3;
   if (!arg3) {
     SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< bls::PublicKey > const & reference is null");
     return 0;
-  } 
+  }
   result = (bool)((bls::InsecureSignature const *)arg1)->Verify((std::vector< uint8_t const * > const &)*arg2,(std::vector< bls::PublicKey > const &)*arg3);
-  jresult = (jboolean)result; 
+  jresult = (jboolean)result;
   return jresult;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_InsecureSignature_1Aggregate(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_InsecureSignature_1Aggregate(JNIEnv *jenv, jclass jcls, jlong jarg1) {
   jlong jresult = 0 ;
   std::vector< bls::InsecureSignature > *arg1 = 0 ;
   SwigValueWrapper< bls::InsecureSignature > result;
-  
+
   (void)jenv;
   (void)jcls;
   arg1 = *(std::vector< bls::InsecureSignature > **)&jarg1;
   if (!arg1) {
     SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< bls::InsecureSignature > const & reference is null");
     return 0;
-  } 
+  }
   result = bls::InsecureSignature::Aggregate((std::vector< bls::InsecureSignature > const &)*arg1);
-  *(bls::InsecureSignature **)&jresult = new bls::InsecureSignature((const bls::InsecureSignature &)result); 
+  *(bls::InsecureSignature **)&jresult = new bls::InsecureSignature((const bls::InsecureSignature &)result);
   return jresult;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_InsecureSignature_1DivideBy(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_InsecureSignature_1DivideBy(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
   jlong jresult = 0 ;
   bls::InsecureSignature *arg1 = (bls::InsecureSignature *) 0 ;
   std::vector< bls::InsecureSignature > *arg2 = 0 ;
   SwigValueWrapper< bls::InsecureSignature > result;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(bls::InsecureSignature **)&jarg1; 
+  arg1 = *(bls::InsecureSignature **)&jarg1;
   arg2 = *(std::vector< bls::InsecureSignature > **)&jarg2;
   if (!arg2) {
     SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< bls::InsecureSignature > const & reference is null");
     return 0;
-  } 
+  }
   result = ((bls::InsecureSignature const *)arg1)->DivideBy((std::vector< bls::InsecureSignature > const &)*arg2);
-  *(bls::InsecureSignature **)&jresult = new bls::InsecureSignature((const bls::InsecureSignature &)result); 
+  *(bls::InsecureSignature **)&jresult = new bls::InsecureSignature((const bls::InsecureSignature &)result);
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_org_axej_bls_JNI_InsecureSignature_1Serialize_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jbyteArray jarg2) {
+SWIGEXPORT void JNICALL Java_org_dashj_bls_JNI_InsecureSignature_1Serialize_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jbyteArray jarg2) {
   bls::InsecureSignature *arg1 = (bls::InsecureSignature *) 0 ;
   uint8_t *arg2 = (uint8_t *) 0 ;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(bls::InsecureSignature **)&jarg1; 
+  arg1 = *(bls::InsecureSignature **)&jarg1;
   {
     arg2 = (uint8_t *) jenv->GetByteArrayElements(jarg2, 0);
   }
@@ -1831,73 +1831,73 @@ SWIGEXPORT void JNICALL Java_org_axej_bls_JNI_InsecureSignature_1Serialize_1_1SW
   {
     jenv->ReleaseByteArrayElements(jarg2, (jbyte *) arg2, 0);
   }
-  
+
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_InsecureSignature_1Serialize_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_InsecureSignature_1Serialize_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   bls::InsecureSignature *arg1 = (bls::InsecureSignature *) 0 ;
   SwigValueWrapper< std::vector< unsigned char > > result;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(bls::InsecureSignature **)&jarg1; 
+  arg1 = *(bls::InsecureSignature **)&jarg1;
   result = ((bls::InsecureSignature const *)arg1)->Serialize();
-  *(std::vector< uint8_t > **)&jresult = new std::vector< uint8_t >((const std::vector< uint8_t > &)result); 
+  *(std::vector< uint8_t > **)&jresult = new std::vector< uint8_t >((const std::vector< uint8_t > &)result);
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_org_axej_bls_JNI_delete_1InsecureSignature(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+SWIGEXPORT void JNICALL Java_org_dashj_bls_JNI_delete_1InsecureSignature(JNIEnv *jenv, jclass jcls, jlong jarg1) {
   bls::InsecureSignature *arg1 = (bls::InsecureSignature *) 0 ;
-  
+
   (void)jenv;
   (void)jcls;
-  arg1 = *(bls::InsecureSignature **)&jarg1; 
+  arg1 = *(bls::InsecureSignature **)&jarg1;
   delete arg1;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_Signature_1SIGNATURE_1SIZE_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_Signature_1SIGNATURE_1SIZE_1get(JNIEnv *jenv, jclass jcls) {
   jlong jresult = 0 ;
   size_t result;
-  
+
   (void)jenv;
   (void)jcls;
   result = bls::Signature::SIGNATURE_SIZE;
-  jresult = (jlong)result; 
+  jresult = (jlong)result;
   return jresult;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_Signature_1FromBytes_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jbyteArray jarg1) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_Signature_1FromBytes_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jbyteArray jarg1) {
   jlong jresult = 0 ;
   uint8_t *arg1 = (uint8_t *) 0 ;
   SwigValueWrapper< bls::Signature > result;
-  
+
   (void)jenv;
   (void)jcls;
   {
     arg1 = (uint8_t *) jenv->GetByteArrayElements(jarg1, 0);
   }
   result = bls::Signature::FromBytes((unsigned char const *)arg1);
-  *(bls::Signature **)&jresult = new bls::Signature((const bls::Signature &)result); 
+  *(bls::Signature **)&jresult = new bls::Signature((const bls::Signature &)result);
   {
     jenv->ReleaseByteArrayElements(jarg1, (jbyte *) arg1, 0);
   }
-  
+
   return jresult;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_Signature_1FromBytes_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jbyteArray jarg1, jlong jarg2) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_Signature_1FromBytes_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jbyteArray jarg1, jlong jarg2) {
   jlong jresult = 0 ;
   uint8_t *arg1 = (uint8_t *) 0 ;
   AggregationInfo *arg2 = 0 ;
   SwigValueWrapper< bls::Signature > result;
-  
+
   (void)jenv;
   (void)jcls;
   {
@@ -1907,56 +1907,56 @@ SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_Signature_1FromBytes_1_1SWIG_11(J
   if (!arg2) {
     SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "AggregationInfo const & reference is null");
     return 0;
-  } 
+  }
   result = bls::Signature::FromBytes((unsigned char const *)arg1,(AggregationInfo const &)*arg2);
-  *(bls::Signature **)&jresult = new bls::Signature((const bls::Signature &)result); 
+  *(bls::Signature **)&jresult = new bls::Signature((const bls::Signature &)result);
   {
     jenv->ReleaseByteArrayElements(jarg1, (jbyte *) arg1, 0);
   }
-  
+
   return jresult;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_Signature_1FromG2_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_Signature_1FromG2_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1) {
   jlong jresult = 0 ;
   g2_t *arg1 = (g2_t *) 0 ;
   SwigValueWrapper< bls::Signature > result;
-  
+
   (void)jenv;
   (void)jcls;
-  arg1 = *(g2_t **)&jarg1; 
+  arg1 = *(g2_t **)&jarg1;
   result = bls::Signature::FromG2((g2_t const *)arg1);
-  *(bls::Signature **)&jresult = new bls::Signature((const bls::Signature &)result); 
+  *(bls::Signature **)&jresult = new bls::Signature((const bls::Signature &)result);
   return jresult;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_Signature_1FromG2_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jlong jarg2) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_Signature_1FromG2_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jlong jarg2) {
   jlong jresult = 0 ;
   g2_t *arg1 = (g2_t *) 0 ;
   AggregationInfo *arg2 = 0 ;
   SwigValueWrapper< bls::Signature > result;
-  
+
   (void)jenv;
   (void)jcls;
-  arg1 = *(g2_t **)&jarg1; 
+  arg1 = *(g2_t **)&jarg1;
   arg2 = *(AggregationInfo **)&jarg2;
   if (!arg2) {
     SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "AggregationInfo const & reference is null");
     return 0;
-  } 
+  }
   result = bls::Signature::FromG2((g2_t const *)arg1,(AggregationInfo const &)*arg2);
-  *(bls::Signature **)&jresult = new bls::Signature((const bls::Signature &)result); 
+  *(bls::Signature **)&jresult = new bls::Signature((const bls::Signature &)result);
   return jresult;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_Signature_1FromInsecureSig_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_Signature_1FromInsecureSig_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   bls::InsecureSignature *arg1 = 0 ;
   SwigValueWrapper< bls::Signature > result;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
@@ -1964,19 +1964,19 @@ SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_Signature_1FromInsecureSig_1_1SWI
   if (!arg1) {
     SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "bls::InsecureSignature const & reference is null");
     return 0;
-  } 
+  }
   result = bls::Signature::FromInsecureSig((bls::InsecureSignature const &)*arg1);
-  *(bls::Signature **)&jresult = new bls::Signature((const bls::Signature &)result); 
+  *(bls::Signature **)&jresult = new bls::Signature((const bls::Signature &)result);
   return jresult;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_Signature_1FromInsecureSig_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_Signature_1FromInsecureSig_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
   jlong jresult = 0 ;
   bls::InsecureSignature *arg1 = 0 ;
   AggregationInfo *arg2 = 0 ;
   SwigValueWrapper< bls::Signature > result;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
@@ -1984,23 +1984,23 @@ SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_Signature_1FromInsecureSig_1_1SWI
   if (!arg1) {
     SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "bls::InsecureSignature const & reference is null");
     return 0;
-  } 
+  }
   arg2 = *(AggregationInfo **)&jarg2;
   if (!arg2) {
     SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "AggregationInfo const & reference is null");
     return 0;
-  } 
+  }
   result = bls::Signature::FromInsecureSig((bls::InsecureSignature const &)*arg1,(AggregationInfo const &)*arg2);
-  *(bls::Signature **)&jresult = new bls::Signature((const bls::Signature &)result); 
+  *(bls::Signature **)&jresult = new bls::Signature((const bls::Signature &)result);
   return jresult;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_new_1Signature(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_new_1Signature(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   bls::Signature *arg1 = 0 ;
   bls::Signature *result = 0 ;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
@@ -2008,107 +2008,107 @@ SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_new_1Signature(JNIEnv *jenv, jcla
   if (!arg1) {
     SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "bls::Signature const & reference is null");
     return 0;
-  } 
+  }
   result = (bls::Signature *)new bls::Signature((bls::Signature const &)*arg1);
-  *(bls::Signature **)&jresult = result; 
+  *(bls::Signature **)&jresult = result;
   return jresult;
 }
 
 
-SWIGEXPORT jboolean JNICALL Java_org_axej_bls_JNI_Signature_1Verify(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jboolean JNICALL Java_org_dashj_bls_JNI_Signature_1Verify(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jboolean jresult = 0 ;
   bls::Signature *arg1 = (bls::Signature *) 0 ;
   bool result;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(bls::Signature **)&jarg1; 
+  arg1 = *(bls::Signature **)&jarg1;
   result = (bool)((bls::Signature const *)arg1)->Verify();
-  jresult = (jboolean)result; 
+  jresult = (jboolean)result;
   return jresult;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_Signature_1AggregateSigs(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_Signature_1AggregateSigs(JNIEnv *jenv, jclass jcls, jlong jarg1) {
   jlong jresult = 0 ;
   std::vector< bls::Signature > *arg1 = 0 ;
   SwigValueWrapper< bls::Signature > result;
-  
+
   (void)jenv;
   (void)jcls;
   arg1 = *(std::vector< bls::Signature > **)&jarg1;
   if (!arg1) {
     SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< bls::Signature > const & reference is null");
     return 0;
-  } 
+  }
   result = bls::Signature::AggregateSigs((std::vector< bls::Signature > const &)*arg1);
-  *(bls::Signature **)&jresult = new bls::Signature((const bls::Signature &)result); 
+  *(bls::Signature **)&jresult = new bls::Signature((const bls::Signature &)result);
   return jresult;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_Signature_1DivideBy(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_Signature_1DivideBy(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
   jlong jresult = 0 ;
   bls::Signature *arg1 = (bls::Signature *) 0 ;
   std::vector< bls::Signature > *arg2 = 0 ;
   SwigValueWrapper< bls::Signature > result;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(bls::Signature **)&jarg1; 
+  arg1 = *(bls::Signature **)&jarg1;
   arg2 = *(std::vector< bls::Signature > **)&jarg2;
   if (!arg2) {
     SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< bls::Signature > const & reference is null");
     return 0;
-  } 
+  }
   result = ((bls::Signature const *)arg1)->DivideBy((std::vector< bls::Signature > const &)*arg2);
-  *(bls::Signature **)&jresult = new bls::Signature((const bls::Signature &)result); 
+  *(bls::Signature **)&jresult = new bls::Signature((const bls::Signature &)result);
   return jresult;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_Signature_1GetAggregationInfo(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_Signature_1GetAggregationInfo(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   bls::Signature *arg1 = (bls::Signature *) 0 ;
   AggregationInfo *result = 0 ;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(bls::Signature **)&jarg1; 
+  arg1 = *(bls::Signature **)&jarg1;
   result = (AggregationInfo *)((bls::Signature const *)arg1)->GetAggregationInfo();
-  *(AggregationInfo **)&jresult = result; 
+  *(AggregationInfo **)&jresult = result;
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_org_axej_bls_JNI_Signature_1SetAggregationInfo(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_org_dashj_bls_JNI_Signature_1SetAggregationInfo(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
   bls::Signature *arg1 = (bls::Signature *) 0 ;
   AggregationInfo *arg2 = 0 ;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(bls::Signature **)&jarg1; 
+  arg1 = *(bls::Signature **)&jarg1;
   arg2 = *(AggregationInfo **)&jarg2;
   if (!arg2) {
     SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "AggregationInfo const & reference is null");
     return ;
-  } 
+  }
   (arg1)->SetAggregationInfo((AggregationInfo const &)*arg2);
 }
 
 
-SWIGEXPORT void JNICALL Java_org_axej_bls_JNI_Signature_1Serialize_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jbyteArray jarg2) {
+SWIGEXPORT void JNICALL Java_org_dashj_bls_JNI_Signature_1Serialize_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jbyteArray jarg2) {
   bls::Signature *arg1 = (bls::Signature *) 0 ;
   uint8_t *arg2 = (uint8_t *) 0 ;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(bls::Signature **)&jarg1; 
+  arg1 = *(bls::Signature **)&jarg1;
   {
     arg2 = (uint8_t *) jenv->GetByteArrayElements(jarg2, 0);
   }
@@ -2116,41 +2116,41 @@ SWIGEXPORT void JNICALL Java_org_axej_bls_JNI_Signature_1Serialize_1_1SWIG_10(JN
   {
     jenv->ReleaseByteArrayElements(jarg2, (jbyte *) arg2, 0);
   }
-  
+
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_Signature_1Serialize_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_Signature_1Serialize_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   bls::Signature *arg1 = (bls::Signature *) 0 ;
   SwigValueWrapper< std::vector< unsigned char > > result;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(bls::Signature **)&jarg1; 
+  arg1 = *(bls::Signature **)&jarg1;
   result = ((bls::Signature const *)arg1)->Serialize();
-  *(std::vector< uint8_t > **)&jresult = new std::vector< uint8_t >((const std::vector< uint8_t > &)result); 
+  *(std::vector< uint8_t > **)&jresult = new std::vector< uint8_t >((const std::vector< uint8_t > &)result);
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_org_axej_bls_JNI_delete_1Signature(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+SWIGEXPORT void JNICALL Java_org_dashj_bls_JNI_delete_1Signature(JNIEnv *jenv, jclass jcls, jlong jarg1) {
   bls::Signature *arg1 = (bls::Signature *) 0 ;
-  
+
   (void)jenv;
   (void)jcls;
-  arg1 = *(bls::Signature **)&jarg1; 
+  arg1 = *(bls::Signature **)&jarg1;
   delete arg1;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_AggregationInfo_1FromMsgHash(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jbyteArray jarg2) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_AggregationInfo_1FromMsgHash(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jbyteArray jarg2) {
   jlong jresult = 0 ;
   bls::PublicKey *arg1 = 0 ;
   uint8_t *arg2 = (uint8_t *) 0 ;
   bls::AggregationInfo result;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
@@ -2158,27 +2158,27 @@ SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_AggregationInfo_1FromMsgHash(JNIE
   if (!arg1) {
     SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "bls::PublicKey const & reference is null");
     return 0;
-  } 
+  }
   {
     arg2 = (uint8_t *) jenv->GetByteArrayElements(jarg2, 0);
   }
   result = bls::AggregationInfo::FromMsgHash((bls::PublicKey const &)*arg1,(unsigned char const *)arg2);
-  *(bls::AggregationInfo **)&jresult = new bls::AggregationInfo((const bls::AggregationInfo &)result); 
+  *(bls::AggregationInfo **)&jresult = new bls::AggregationInfo((const bls::AggregationInfo &)result);
   {
     jenv->ReleaseByteArrayElements(jarg2, (jbyte *) arg2, 0);
   }
-  
+
   return jresult;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_AggregationInfo_1FromMsg(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jbyteArray jarg2, jlong jarg3) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_AggregationInfo_1FromMsg(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jbyteArray jarg2, jlong jarg3) {
   jlong jresult = 0 ;
   bls::PublicKey *arg1 = 0 ;
   uint8_t *arg2 = (uint8_t *) 0 ;
   size_t arg3 ;
   bls::AggregationInfo result;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
@@ -2186,28 +2186,28 @@ SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_AggregationInfo_1FromMsg(JNIEnv *
   if (!arg1) {
     SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "bls::PublicKey const & reference is null");
     return 0;
-  } 
+  }
   {
     arg2 = (uint8_t *) jenv->GetByteArrayElements(jarg2, 0);
   }
-  arg3 = (size_t)jarg3; 
+  arg3 = (size_t)jarg3;
   result = bls::AggregationInfo::FromMsg((bls::PublicKey const &)*arg1,(unsigned char const *)arg2,arg3);
-  *(bls::AggregationInfo **)&jresult = new bls::AggregationInfo((const bls::AggregationInfo &)result); 
+  *(bls::AggregationInfo **)&jresult = new bls::AggregationInfo((const bls::AggregationInfo &)result);
   {
     jenv->ReleaseByteArrayElements(jarg2, (jbyte *) arg2, 0);
   }
-  
+
   return jresult;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_AggregationInfo_1FromVectors(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_AggregationInfo_1FromVectors(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_) {
   jlong jresult = 0 ;
   std::vector< bls::PublicKey > *arg1 = 0 ;
   std::vector< uint8_t * > *arg2 = 0 ;
   std::vector< bn_t * > *arg3 = 0 ;
   bls::AggregationInfo result;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
@@ -2217,46 +2217,46 @@ SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_AggregationInfo_1FromVectors(JNIE
   if (!arg1) {
     SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< bls::PublicKey > const & reference is null");
     return 0;
-  } 
+  }
   arg2 = *(std::vector< uint8_t * > **)&jarg2;
   if (!arg2) {
     SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< uint8_t * > const & reference is null");
     return 0;
-  } 
+  }
   arg3 = *(std::vector< bn_t * > **)&jarg3;
   if (!arg3) {
     SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< bn_t * > const & reference is null");
     return 0;
-  } 
+  }
   result = bls::AggregationInfo::FromVectors((std::vector< bls::PublicKey > const &)*arg1,(std::vector< unsigned char * > const &)*arg2,(std::vector< bn_t * > const &)*arg3);
-  *(bls::AggregationInfo **)&jresult = new bls::AggregationInfo((const bls::AggregationInfo &)result); 
+  *(bls::AggregationInfo **)&jresult = new bls::AggregationInfo((const bls::AggregationInfo &)result);
   return jresult;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_AggregationInfo_1MergeInfos(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_AggregationInfo_1MergeInfos(JNIEnv *jenv, jclass jcls, jlong jarg1) {
   jlong jresult = 0 ;
   std::vector< bls::AggregationInfo > *arg1 = 0 ;
   bls::AggregationInfo result;
-  
+
   (void)jenv;
   (void)jcls;
   arg1 = *(std::vector< bls::AggregationInfo > **)&jarg1;
   if (!arg1) {
     SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< bls::AggregationInfo > const & reference is null");
     return 0;
-  } 
+  }
   result = bls::AggregationInfo::MergeInfos((std::vector< bls::AggregationInfo > const &)*arg1);
-  *(bls::AggregationInfo **)&jresult = new bls::AggregationInfo((const bls::AggregationInfo &)result); 
+  *(bls::AggregationInfo **)&jresult = new bls::AggregationInfo((const bls::AggregationInfo &)result);
   return jresult;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_new_1AggregationInfo_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_new_1AggregationInfo_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   bls::AggregationInfo *arg1 = 0 ;
   bls::AggregationInfo *result = 0 ;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
@@ -2264,50 +2264,50 @@ SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_new_1AggregationInfo_1_1SWIG_10(J
   if (!arg1) {
     SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "bls::AggregationInfo const & reference is null");
     return 0;
-  } 
+  }
   result = (bls::AggregationInfo *)new bls::AggregationInfo((bls::AggregationInfo const &)*arg1);
-  *(bls::AggregationInfo **)&jresult = result; 
+  *(bls::AggregationInfo **)&jresult = result;
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_org_axej_bls_JNI_AggregationInfo_1RemoveEntries(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_) {
+SWIGEXPORT void JNICALL Java_org_dashj_bls_JNI_AggregationInfo_1RemoveEntries(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_) {
   bls::AggregationInfo *arg1 = (bls::AggregationInfo *) 0 ;
   std::vector< uint8_t * > *arg2 = 0 ;
   std::vector< bls::PublicKey > *arg3 = 0 ;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   (void)jarg2_;
   (void)jarg3_;
-  arg1 = *(bls::AggregationInfo **)&jarg1; 
+  arg1 = *(bls::AggregationInfo **)&jarg1;
   arg2 = *(std::vector< uint8_t * > **)&jarg2;
   if (!arg2) {
     SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< uint8_t * > const & reference is null");
     return ;
-  } 
+  }
   arg3 = *(std::vector< bls::PublicKey > **)&jarg3;
   if (!arg3) {
     SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< bls::PublicKey > const & reference is null");
     return ;
-  } 
+  }
   (arg1)->RemoveEntries((std::vector< uint8_t * > const &)*arg2,(std::vector< bls::PublicKey > const &)*arg3);
 }
 
 
-SWIGEXPORT void JNICALL Java_org_axej_bls_JNI_AggregationInfo_1GetExponent(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jbyteArray jarg3, jlong jarg4, jobject jarg4_) {
+SWIGEXPORT void JNICALL Java_org_dashj_bls_JNI_AggregationInfo_1GetExponent(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jbyteArray jarg3, jlong jarg4, jobject jarg4_) {
   bls::AggregationInfo *arg1 = (bls::AggregationInfo *) 0 ;
   bn_t *arg2 = (bn_t *) 0 ;
   uint8_t *arg3 = (uint8_t *) 0 ;
   bls::PublicKey *arg4 = 0 ;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   (void)jarg4_;
-  arg1 = *(bls::AggregationInfo **)&jarg1; 
-  arg2 = *(bn_t **)&jarg2; 
+  arg1 = *(bls::AggregationInfo **)&jarg1;
+  arg2 = *(bn_t **)&jarg2;
   {
     arg3 = (uint8_t *) jenv->GetByteArrayElements(jarg3, 0);
   }
@@ -2315,99 +2315,99 @@ SWIGEXPORT void JNICALL Java_org_axej_bls_JNI_AggregationInfo_1GetExponent(JNIEn
   if (!arg4) {
     SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "bls::PublicKey const & reference is null");
     return ;
-  } 
+  }
   ((bls::AggregationInfo const *)arg1)->GetExponent(arg2,(uint8_t const *)arg3,(bls::PublicKey const &)*arg4);
   {
     jenv->ReleaseByteArrayElements(jarg3, (jbyte *) arg3, 0);
   }
-  
+
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_AggregationInfo_1GetPubKeys(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_AggregationInfo_1GetPubKeys(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   bls::AggregationInfo *arg1 = (bls::AggregationInfo *) 0 ;
   std::vector< bls::PublicKey > result;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(bls::AggregationInfo **)&jarg1; 
+  arg1 = *(bls::AggregationInfo **)&jarg1;
   result = ((bls::AggregationInfo const *)arg1)->GetPubKeys();
-  *(std::vector< bls::PublicKey > **)&jresult = new std::vector< bls::PublicKey >((const std::vector< bls::PublicKey > &)result); 
+  *(std::vector< bls::PublicKey > **)&jresult = new std::vector< bls::PublicKey >((const std::vector< bls::PublicKey > &)result);
   return jresult;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_AggregationInfo_1GetMessageHashes(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_AggregationInfo_1GetMessageHashes(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   bls::AggregationInfo *arg1 = (bls::AggregationInfo *) 0 ;
   std::vector< uint8_t * > result;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(bls::AggregationInfo **)&jarg1; 
+  arg1 = *(bls::AggregationInfo **)&jarg1;
   result = ((bls::AggregationInfo const *)arg1)->GetMessageHashes();
-  *(std::vector< uint8_t * > **)&jresult = new std::vector< uint8_t * >((const std::vector< uint8_t * > &)result); 
+  *(std::vector< uint8_t * > **)&jresult = new std::vector< uint8_t * >((const std::vector< uint8_t * > &)result);
   return jresult;
 }
 
 
-SWIGEXPORT jboolean JNICALL Java_org_axej_bls_JNI_AggregationInfo_1Empty(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jboolean JNICALL Java_org_dashj_bls_JNI_AggregationInfo_1Empty(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jboolean jresult = 0 ;
   bls::AggregationInfo *arg1 = (bls::AggregationInfo *) 0 ;
   bool result;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(bls::AggregationInfo **)&jarg1; 
+  arg1 = *(bls::AggregationInfo **)&jarg1;
   result = (bool)((bls::AggregationInfo const *)arg1)->Empty();
-  jresult = (jboolean)result; 
+  jresult = (jboolean)result;
   return jresult;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_new_1AggregationInfo_1_1SWIG_11(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_new_1AggregationInfo_1_1SWIG_11(JNIEnv *jenv, jclass jcls) {
   jlong jresult = 0 ;
   bls::AggregationInfo *result = 0 ;
-  
+
   (void)jenv;
   (void)jcls;
   result = (bls::AggregationInfo *)new bls::AggregationInfo();
-  *(bls::AggregationInfo **)&jresult = result; 
+  *(bls::AggregationInfo **)&jresult = result;
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_org_axej_bls_JNI_delete_1AggregationInfo(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+SWIGEXPORT void JNICALL Java_org_dashj_bls_JNI_delete_1AggregationInfo(JNIEnv *jenv, jclass jcls, jlong jarg1) {
   bls::AggregationInfo *arg1 = (bls::AggregationInfo *) 0 ;
-  
+
   (void)jenv;
   (void)jcls;
-  arg1 = *(bls::AggregationInfo **)&jarg1; 
+  arg1 = *(bls::AggregationInfo **)&jarg1;
   delete arg1;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_new_1PublicKeyVec_1_1SWIG_10(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_new_1PublicKeyVec_1_1SWIG_10(JNIEnv *jenv, jclass jcls) {
   jlong jresult = 0 ;
   std::vector< bls::PublicKey > *result = 0 ;
-  
+
   (void)jenv;
   (void)jcls;
   result = (std::vector< bls::PublicKey > *)new std::vector< bls::PublicKey >();
-  *(std::vector< bls::PublicKey > **)&jresult = result; 
+  *(std::vector< bls::PublicKey > **)&jresult = result;
   return jresult;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_new_1PublicKeyVec_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_new_1PublicKeyVec_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   std::vector< bls::PublicKey > *arg1 = 0 ;
   std::vector< bls::PublicKey > *result = 0 ;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
@@ -2415,96 +2415,96 @@ SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_new_1PublicKeyVec_1_1SWIG_12(JNIE
   if (!arg1) {
     SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< bls::PublicKey > const & reference is null");
     return 0;
-  } 
+  }
   result = (std::vector< bls::PublicKey > *)new std::vector< bls::PublicKey >((std::vector< bls::PublicKey > const &)*arg1);
-  *(std::vector< bls::PublicKey > **)&jresult = result; 
+  *(std::vector< bls::PublicKey > **)&jresult = result;
   return jresult;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_PublicKeyVec_1capacity(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_PublicKeyVec_1capacity(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   std::vector< bls::PublicKey > *arg1 = (std::vector< bls::PublicKey > *) 0 ;
   std::vector< bls::PublicKey >::size_type result;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(std::vector< bls::PublicKey > **)&jarg1; 
+  arg1 = *(std::vector< bls::PublicKey > **)&jarg1;
   result = ((std::vector< bls::PublicKey > const *)arg1)->capacity();
-  jresult = (jlong)result; 
+  jresult = (jlong)result;
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_org_axej_bls_JNI_PublicKeyVec_1reserve(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_org_dashj_bls_JNI_PublicKeyVec_1reserve(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
   std::vector< bls::PublicKey > *arg1 = (std::vector< bls::PublicKey > *) 0 ;
   std::vector< bls::PublicKey >::size_type arg2 ;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(std::vector< bls::PublicKey > **)&jarg1; 
-  arg2 = (std::vector< bls::PublicKey >::size_type)jarg2; 
+  arg1 = *(std::vector< bls::PublicKey > **)&jarg1;
+  arg2 = (std::vector< bls::PublicKey >::size_type)jarg2;
   (arg1)->reserve(arg2);
 }
 
 
-SWIGEXPORT jboolean JNICALL Java_org_axej_bls_JNI_PublicKeyVec_1isEmpty(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jboolean JNICALL Java_org_dashj_bls_JNI_PublicKeyVec_1isEmpty(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jboolean jresult = 0 ;
   std::vector< bls::PublicKey > *arg1 = (std::vector< bls::PublicKey > *) 0 ;
   bool result;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(std::vector< bls::PublicKey > **)&jarg1; 
+  arg1 = *(std::vector< bls::PublicKey > **)&jarg1;
   result = (bool)((std::vector< bls::PublicKey > const *)arg1)->empty();
-  jresult = (jboolean)result; 
+  jresult = (jboolean)result;
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_org_axej_bls_JNI_PublicKeyVec_1clear(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT void JNICALL Java_org_dashj_bls_JNI_PublicKeyVec_1clear(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   std::vector< bls::PublicKey > *arg1 = (std::vector< bls::PublicKey > *) 0 ;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(std::vector< bls::PublicKey > **)&jarg1; 
+  arg1 = *(std::vector< bls::PublicKey > **)&jarg1;
   (arg1)->clear();
 }
 
 
-SWIGEXPORT void JNICALL Java_org_axej_bls_JNI_PublicKeyVec_1push_1back(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+SWIGEXPORT void JNICALL Java_org_dashj_bls_JNI_PublicKeyVec_1push_1back(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
   std::vector< bls::PublicKey > *arg1 = (std::vector< bls::PublicKey > *) 0 ;
   std::vector< bls::PublicKey >::value_type *arg2 = 0 ;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   (void)jarg2_;
-  arg1 = *(std::vector< bls::PublicKey > **)&jarg1; 
+  arg1 = *(std::vector< bls::PublicKey > **)&jarg1;
   arg2 = *(std::vector< bls::PublicKey >::value_type **)&jarg2;
   if (!arg2) {
     SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< bls::PublicKey >::value_type const & reference is null");
     return ;
-  } 
+  }
   (arg1)->push_back((std::vector< bls::PublicKey >::value_type const &)*arg2);
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_PublicKeyVec_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_PublicKeyVec_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   jlong jresult = 0 ;
   std::vector< bls::PublicKey > *arg1 = (std::vector< bls::PublicKey > *) 0 ;
   int arg2 ;
   std::vector< bls::PublicKey >::value_type *result = 0 ;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(std::vector< bls::PublicKey > **)&jarg1; 
-  arg2 = (int)jarg2; 
+  arg1 = *(std::vector< bls::PublicKey > **)&jarg1;
+  arg2 = (int)jarg2;
   try {
     result = (std::vector< bls::PublicKey >::value_type *) &std_vector_Sl_bls_PublicKey_Sg__get((std::vector< bls::PublicKey > const *)arg1,arg2);
   }
@@ -2512,30 +2512,30 @@ SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_PublicKeyVec_1get(JNIEnv *jenv, j
     SWIG_JavaThrowException(jenv, SWIG_JavaIndexOutOfBoundsException, (&_e)->what());
     return 0;
   }
-  
-  *(std::vector< bls::PublicKey >::value_type **)&jresult = result; 
+
+  *(std::vector< bls::PublicKey >::value_type **)&jresult = result;
   return jresult;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_PublicKeyVec_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jlong jarg3, jobject jarg3_) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_PublicKeyVec_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jlong jarg3, jobject jarg3_) {
   jlong jresult = 0 ;
   std::vector< bls::PublicKey > *arg1 = (std::vector< bls::PublicKey > *) 0 ;
   int arg2 ;
   std::vector< bls::PublicKey >::value_type *arg3 = 0 ;
   SwigValueWrapper< bls::PublicKey > result;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   (void)jarg3_;
-  arg1 = *(std::vector< bls::PublicKey > **)&jarg1; 
-  arg2 = (int)jarg2; 
+  arg1 = *(std::vector< bls::PublicKey > **)&jarg1;
+  arg2 = (int)jarg2;
   arg3 = *(std::vector< bls::PublicKey >::value_type **)&jarg3;
   if (!arg3) {
     SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< bls::PublicKey >::value_type const & reference is null");
     return 0;
-  } 
+  }
   try {
     result = std_vector_Sl_bls_PublicKey_Sg__set(arg1,arg2,(bls::PublicKey &)*arg3);
   }
@@ -2543,69 +2543,69 @@ SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_PublicKeyVec_1set(JNIEnv *jenv, j
     SWIG_JavaThrowException(jenv, SWIG_JavaIndexOutOfBoundsException, (&_e)->what());
     return 0;
   }
-  
-  *(std::vector< bls::PublicKey >::value_type **)&jresult = new std::vector< bls::PublicKey >::value_type((const std::vector< bls::PublicKey >::value_type &)result); 
+
+  *(std::vector< bls::PublicKey >::value_type **)&jresult = new std::vector< bls::PublicKey >::value_type((const std::vector< bls::PublicKey >::value_type &)result);
   return jresult;
 }
 
 
-SWIGEXPORT jint JNICALL Java_org_axej_bls_JNI_PublicKeyVec_1size(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jint JNICALL Java_org_dashj_bls_JNI_PublicKeyVec_1size(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jint jresult = 0 ;
   std::vector< bls::PublicKey > *arg1 = (std::vector< bls::PublicKey > *) 0 ;
   int32_t result;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(std::vector< bls::PublicKey > **)&jarg1; 
+  arg1 = *(std::vector< bls::PublicKey > **)&jarg1;
   result = (int32_t)std_vector_Sl_bls_PublicKey_Sg__size((std::vector< bls::PublicKey > const *)arg1);
-  jresult = (jint)result; 
+  jresult = (jint)result;
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_org_axej_bls_JNI_PublicKeyVec_1removeRange(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jint jarg3) {
+SWIGEXPORT void JNICALL Java_org_dashj_bls_JNI_PublicKeyVec_1removeRange(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jint jarg3) {
   std::vector< bls::PublicKey > *arg1 = (std::vector< bls::PublicKey > *) 0 ;
   int32_t arg2 ;
   int32_t arg3 ;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(std::vector< bls::PublicKey > **)&jarg1; 
-  arg2 = (int32_t)jarg2; 
-  arg3 = (int32_t)jarg3; 
+  arg1 = *(std::vector< bls::PublicKey > **)&jarg1;
+  arg2 = (int32_t)jarg2;
+  arg3 = (int32_t)jarg3;
   std_vector_Sl_bls_PublicKey_Sg__removeRange(arg1,arg2,arg3);
 }
 
 
-SWIGEXPORT void JNICALL Java_org_axej_bls_JNI_delete_1PublicKeyVec(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+SWIGEXPORT void JNICALL Java_org_dashj_bls_JNI_delete_1PublicKeyVec(JNIEnv *jenv, jclass jcls, jlong jarg1) {
   std::vector< bls::PublicKey > *arg1 = (std::vector< bls::PublicKey > *) 0 ;
-  
+
   (void)jenv;
   (void)jcls;
-  arg1 = *(std::vector< bls::PublicKey > **)&jarg1; 
+  arg1 = *(std::vector< bls::PublicKey > **)&jarg1;
   delete arg1;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_new_1PrivateKeyVec_1_1SWIG_10(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_new_1PrivateKeyVec_1_1SWIG_10(JNIEnv *jenv, jclass jcls) {
   jlong jresult = 0 ;
   std::vector< bls::PrivateKey > *result = 0 ;
-  
+
   (void)jenv;
   (void)jcls;
   result = (std::vector< bls::PrivateKey > *)new std::vector< bls::PrivateKey >();
-  *(std::vector< bls::PrivateKey > **)&jresult = result; 
+  *(std::vector< bls::PrivateKey > **)&jresult = result;
   return jresult;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_new_1PrivateKeyVec_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_new_1PrivateKeyVec_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   std::vector< bls::PrivateKey > *arg1 = 0 ;
   std::vector< bls::PrivateKey > *result = 0 ;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
@@ -2613,96 +2613,96 @@ SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_new_1PrivateKeyVec_1_1SWIG_12(JNI
   if (!arg1) {
     SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< bls::PrivateKey > const & reference is null");
     return 0;
-  } 
+  }
   result = (std::vector< bls::PrivateKey > *)new std::vector< bls::PrivateKey >((std::vector< bls::PrivateKey > const &)*arg1);
-  *(std::vector< bls::PrivateKey > **)&jresult = result; 
+  *(std::vector< bls::PrivateKey > **)&jresult = result;
   return jresult;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_PrivateKeyVec_1capacity(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_PrivateKeyVec_1capacity(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   std::vector< bls::PrivateKey > *arg1 = (std::vector< bls::PrivateKey > *) 0 ;
   std::vector< bls::PrivateKey >::size_type result;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(std::vector< bls::PrivateKey > **)&jarg1; 
+  arg1 = *(std::vector< bls::PrivateKey > **)&jarg1;
   result = ((std::vector< bls::PrivateKey > const *)arg1)->capacity();
-  jresult = (jlong)result; 
+  jresult = (jlong)result;
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_org_axej_bls_JNI_PrivateKeyVec_1reserve(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_org_dashj_bls_JNI_PrivateKeyVec_1reserve(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
   std::vector< bls::PrivateKey > *arg1 = (std::vector< bls::PrivateKey > *) 0 ;
   std::vector< bls::PrivateKey >::size_type arg2 ;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(std::vector< bls::PrivateKey > **)&jarg1; 
-  arg2 = (std::vector< bls::PrivateKey >::size_type)jarg2; 
+  arg1 = *(std::vector< bls::PrivateKey > **)&jarg1;
+  arg2 = (std::vector< bls::PrivateKey >::size_type)jarg2;
   (arg1)->reserve(arg2);
 }
 
 
-SWIGEXPORT jboolean JNICALL Java_org_axej_bls_JNI_PrivateKeyVec_1isEmpty(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jboolean JNICALL Java_org_dashj_bls_JNI_PrivateKeyVec_1isEmpty(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jboolean jresult = 0 ;
   std::vector< bls::PrivateKey > *arg1 = (std::vector< bls::PrivateKey > *) 0 ;
   bool result;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(std::vector< bls::PrivateKey > **)&jarg1; 
+  arg1 = *(std::vector< bls::PrivateKey > **)&jarg1;
   result = (bool)((std::vector< bls::PrivateKey > const *)arg1)->empty();
-  jresult = (jboolean)result; 
+  jresult = (jboolean)result;
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_org_axej_bls_JNI_PrivateKeyVec_1clear(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT void JNICALL Java_org_dashj_bls_JNI_PrivateKeyVec_1clear(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   std::vector< bls::PrivateKey > *arg1 = (std::vector< bls::PrivateKey > *) 0 ;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(std::vector< bls::PrivateKey > **)&jarg1; 
+  arg1 = *(std::vector< bls::PrivateKey > **)&jarg1;
   (arg1)->clear();
 }
 
 
-SWIGEXPORT void JNICALL Java_org_axej_bls_JNI_PrivateKeyVec_1push_1back(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+SWIGEXPORT void JNICALL Java_org_dashj_bls_JNI_PrivateKeyVec_1push_1back(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
   std::vector< bls::PrivateKey > *arg1 = (std::vector< bls::PrivateKey > *) 0 ;
   std::vector< bls::PrivateKey >::value_type *arg2 = 0 ;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   (void)jarg2_;
-  arg1 = *(std::vector< bls::PrivateKey > **)&jarg1; 
+  arg1 = *(std::vector< bls::PrivateKey > **)&jarg1;
   arg2 = *(std::vector< bls::PrivateKey >::value_type **)&jarg2;
   if (!arg2) {
     SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< bls::PrivateKey >::value_type const & reference is null");
     return ;
-  } 
+  }
   (arg1)->push_back((std::vector< bls::PrivateKey >::value_type const &)*arg2);
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_PrivateKeyVec_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_PrivateKeyVec_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   jlong jresult = 0 ;
   std::vector< bls::PrivateKey > *arg1 = (std::vector< bls::PrivateKey > *) 0 ;
   int arg2 ;
   std::vector< bls::PrivateKey >::value_type *result = 0 ;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(std::vector< bls::PrivateKey > **)&jarg1; 
-  arg2 = (int)jarg2; 
+  arg1 = *(std::vector< bls::PrivateKey > **)&jarg1;
+  arg2 = (int)jarg2;
   try {
     result = (std::vector< bls::PrivateKey >::value_type *) &std_vector_Sl_bls_PrivateKey_Sg__get((std::vector< bls::PrivateKey > const *)arg1,arg2);
   }
@@ -2710,30 +2710,30 @@ SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_PrivateKeyVec_1get(JNIEnv *jenv, 
     SWIG_JavaThrowException(jenv, SWIG_JavaIndexOutOfBoundsException, (&_e)->what());
     return 0;
   }
-  
-  *(std::vector< bls::PrivateKey >::value_type **)&jresult = result; 
+
+  *(std::vector< bls::PrivateKey >::value_type **)&jresult = result;
   return jresult;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_PrivateKeyVec_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jlong jarg3, jobject jarg3_) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_PrivateKeyVec_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jlong jarg3, jobject jarg3_) {
   jlong jresult = 0 ;
   std::vector< bls::PrivateKey > *arg1 = (std::vector< bls::PrivateKey > *) 0 ;
   int arg2 ;
   std::vector< bls::PrivateKey >::value_type *arg3 = 0 ;
   SwigValueWrapper< bls::PrivateKey > result;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   (void)jarg3_;
-  arg1 = *(std::vector< bls::PrivateKey > **)&jarg1; 
-  arg2 = (int)jarg2; 
+  arg1 = *(std::vector< bls::PrivateKey > **)&jarg1;
+  arg2 = (int)jarg2;
   arg3 = *(std::vector< bls::PrivateKey >::value_type **)&jarg3;
   if (!arg3) {
     SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< bls::PrivateKey >::value_type const & reference is null");
     return 0;
-  } 
+  }
   try {
     result = std_vector_Sl_bls_PrivateKey_Sg__set(arg1,arg2,(bls::PrivateKey &)*arg3);
   }
@@ -2741,83 +2741,83 @@ SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_PrivateKeyVec_1set(JNIEnv *jenv, 
     SWIG_JavaThrowException(jenv, SWIG_JavaIndexOutOfBoundsException, (&_e)->what());
     return 0;
   }
-  
-  *(std::vector< bls::PrivateKey >::value_type **)&jresult = new std::vector< bls::PrivateKey >::value_type((const std::vector< bls::PrivateKey >::value_type &)result); 
+
+  *(std::vector< bls::PrivateKey >::value_type **)&jresult = new std::vector< bls::PrivateKey >::value_type((const std::vector< bls::PrivateKey >::value_type &)result);
   return jresult;
 }
 
 
-SWIGEXPORT jint JNICALL Java_org_axej_bls_JNI_PrivateKeyVec_1size(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jint JNICALL Java_org_dashj_bls_JNI_PrivateKeyVec_1size(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jint jresult = 0 ;
   std::vector< bls::PrivateKey > *arg1 = (std::vector< bls::PrivateKey > *) 0 ;
   int32_t result;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(std::vector< bls::PrivateKey > **)&jarg1; 
+  arg1 = *(std::vector< bls::PrivateKey > **)&jarg1;
   result = (int32_t)std_vector_Sl_bls_PrivateKey_Sg__size((std::vector< bls::PrivateKey > const *)arg1);
-  jresult = (jint)result; 
+  jresult = (jint)result;
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_org_axej_bls_JNI_PrivateKeyVec_1removeRange(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jint jarg3) {
+SWIGEXPORT void JNICALL Java_org_dashj_bls_JNI_PrivateKeyVec_1removeRange(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jint jarg3) {
   std::vector< bls::PrivateKey > *arg1 = (std::vector< bls::PrivateKey > *) 0 ;
   int32_t arg2 ;
   int32_t arg3 ;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(std::vector< bls::PrivateKey > **)&jarg1; 
-  arg2 = (int32_t)jarg2; 
-  arg3 = (int32_t)jarg3; 
+  arg1 = *(std::vector< bls::PrivateKey > **)&jarg1;
+  arg2 = (int32_t)jarg2;
+  arg3 = (int32_t)jarg3;
   std_vector_Sl_bls_PrivateKey_Sg__removeRange(arg1,arg2,arg3);
 }
 
 
-SWIGEXPORT void JNICALL Java_org_axej_bls_JNI_delete_1PrivateKeyVec(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+SWIGEXPORT void JNICALL Java_org_dashj_bls_JNI_delete_1PrivateKeyVec(JNIEnv *jenv, jclass jcls, jlong jarg1) {
   std::vector< bls::PrivateKey > *arg1 = (std::vector< bls::PrivateKey > *) 0 ;
-  
+
   (void)jenv;
   (void)jcls;
-  arg1 = *(std::vector< bls::PrivateKey > **)&jarg1; 
+  arg1 = *(std::vector< bls::PrivateKey > **)&jarg1;
   delete arg1;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_new_1ByteArrayVec_1_1SWIG_10(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_new_1ByteArrayVec_1_1SWIG_10(JNIEnv *jenv, jclass jcls) {
   jlong jresult = 0 ;
   std::vector< uint8_t * > *result = 0 ;
-  
+
   (void)jenv;
   (void)jcls;
   result = (std::vector< uint8_t * > *)new std::vector< uint8_t * >();
-  *(std::vector< uint8_t * > **)&jresult = result; 
+  *(std::vector< uint8_t * > **)&jresult = result;
   return jresult;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_new_1ByteArrayVec_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_new_1ByteArrayVec_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1) {
   jlong jresult = 0 ;
   std::vector< unsigned char * >::size_type arg1 ;
   std::vector< uint8_t * > *result = 0 ;
-  
+
   (void)jenv;
   (void)jcls;
-  arg1 = (std::vector< unsigned char * >::size_type)jarg1; 
+  arg1 = (std::vector< unsigned char * >::size_type)jarg1;
   result = (std::vector< uint8_t * > *)new std::vector< uint8_t * >(arg1);
-  *(std::vector< uint8_t * > **)&jresult = result; 
+  *(std::vector< uint8_t * > **)&jresult = result;
   return jresult;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_new_1ByteArrayVec_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_new_1ByteArrayVec_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   std::vector< uint8_t * > *arg1 = 0 ;
   std::vector< uint8_t * > *result = 0 ;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
@@ -2825,59 +2825,59 @@ SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_new_1ByteArrayVec_1_1SWIG_12(JNIE
   if (!arg1) {
     SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< uint8_t * > const & reference is null");
     return 0;
-  } 
+  }
   result = (std::vector< uint8_t * > *)new std::vector< uint8_t * >((std::vector< uint8_t * > const &)*arg1);
-  *(std::vector< uint8_t * > **)&jresult = result; 
+  *(std::vector< uint8_t * > **)&jresult = result;
   return jresult;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_ByteArrayVec_1capacity(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_ByteArrayVec_1capacity(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   std::vector< uint8_t * > *arg1 = (std::vector< uint8_t * > *) 0 ;
   std::vector< unsigned char * >::size_type result;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(std::vector< uint8_t * > **)&jarg1; 
+  arg1 = *(std::vector< uint8_t * > **)&jarg1;
   result = ((std::vector< uint8_t * > const *)arg1)->capacity();
-  jresult = (jlong)result; 
+  jresult = (jlong)result;
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_org_axej_bls_JNI_ByteArrayVec_1reserve(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_org_dashj_bls_JNI_ByteArrayVec_1reserve(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
   std::vector< uint8_t * > *arg1 = (std::vector< uint8_t * > *) 0 ;
   std::vector< unsigned char * >::size_type arg2 ;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(std::vector< uint8_t * > **)&jarg1; 
-  arg2 = (std::vector< unsigned char * >::size_type)jarg2; 
+  arg1 = *(std::vector< uint8_t * > **)&jarg1;
+  arg2 = (std::vector< unsigned char * >::size_type)jarg2;
   (arg1)->reserve(arg2);
 }
 
 
-SWIGEXPORT jboolean JNICALL Java_org_axej_bls_JNI_ByteArrayVec_1isEmpty(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jboolean JNICALL Java_org_dashj_bls_JNI_ByteArrayVec_1isEmpty(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jboolean jresult = 0 ;
   std::vector< uint8_t * > *arg1 = (std::vector< uint8_t * > *) 0 ;
   bool result;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(std::vector< uint8_t * > **)&jarg1; 
+  arg1 = *(std::vector< uint8_t * > **)&jarg1;
   result = (bool)((std::vector< uint8_t * > const *)arg1)->empty();
-  jresult = (jboolean)result; 
+  jresult = (jboolean)result;
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_org_axej_bls_JNI_ByteArrayVec_1clear(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT void JNICALL Java_org_dashj_bls_JNI_ByteArrayVec_1clear(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   std::vector< uint8_t * > *arg1 = (std::vector< uint8_t * > *) 0 ;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
@@ -2888,13 +2888,13 @@ SWIGEXPORT void JNICALL Java_org_axej_bls_JNI_ByteArrayVec_1clear(JNIEnv *jenv, 
 }
 
 
-SWIGEXPORT void JNICALL Java_org_axej_bls_JNI_ByteArrayVec_1push_1back(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jbyteArray jarg2) {
+SWIGEXPORT void JNICALL Java_org_dashj_bls_JNI_ByteArrayVec_1push_1back(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jbyteArray jarg2) {
   std::vector< uint8_t * > *arg1 = (std::vector< uint8_t * > *) 0 ;
   std::vector< unsigned char * >::value_type arg2 = 0 ;
   size_t arg2len = 0;
 
   std::vector< unsigned char * >::value_type temp2 = 0 ;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
@@ -2920,17 +2920,17 @@ SWIGEXPORT void JNICALL Java_org_axej_bls_JNI_ByteArrayVec_1push_1back(JNIEnv *j
 }
 
 
-SWIGEXPORT jbyteArray JNICALL Java_org_axej_bls_JNI_ByteArrayVec_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+SWIGEXPORT jbyteArray JNICALL Java_org_dashj_bls_JNI_ByteArrayVec_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   jbyteArray jresult = 0 ;
   std::vector< uint8_t * > *arg1 = (std::vector< uint8_t * > *) 0 ;
   int arg2 ;
   std::vector< unsigned char * >::value_type result = 0;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(std::vector< uint8_t * > **)&jarg1; 
-  arg2 = (int)jarg2; 
+  arg1 = *(std::vector< uint8_t * > **)&jarg1;
+  arg2 = (int)jarg2;
   try {
     result = (std::vector< unsigned char * >::value_type) std_vector_Sl_uint8_t_Sm__Sg__get((std::vector< unsigned char * > const *)arg1,arg2);
   }
@@ -2938,9 +2938,9 @@ SWIGEXPORT jbyteArray JNICALL Java_org_axej_bls_JNI_ByteArrayVec_1get(JNIEnv *je
     SWIG_JavaThrowException(jenv, SWIG_JavaIndexOutOfBoundsException, (&_e)->what());
     return 0;
   }
-  
+
   jresult = jenv->NewByteArray(BLS::MESSAGE_HASH_LEN);
-  
+
     if (result == NULL) {
         SWIG_JavaThrowException(jenv, SWIG_JavaOutOfMemoryError, "Can't create new byte array");
         return NULL; //  out of memory error thrown
@@ -2954,40 +2954,40 @@ SWIGEXPORT jbyteArray JNICALL Java_org_axej_bls_JNI_ByteArrayVec_1get(JNIEnv *je
    }
 */
     // move from the temp structure to the java structure
-    jenv->SetByteArrayRegion(jresult, 0, BLS::MESSAGE_HASH_LEN, (jbyte*)result); 
+    jenv->SetByteArrayRegion(jresult, 0, BLS::MESSAGE_HASH_LEN, (jbyte*)result);
   /**/
-  //*(std::vector< unsigned char * >::value_type *)&jresult = *result; 
+  //*(std::vector< unsigned char * >::value_type *)&jresult = *result;
   return jresult;
 }
 
 
-SWIGEXPORT jbyteArray JNICALL Java_org_axej_bls_JNI_ByteArrayVec_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jbyteArray jarg3) {
+SWIGEXPORT jbyteArray JNICALL Java_org_dashj_bls_JNI_ByteArrayVec_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jbyteArray jarg3) {
   jbyteArray jresult = 0 ;
   std::vector< uint8_t * > *arg1 = (std::vector< uint8_t * > *) 0 ;
   int arg2 ;
   std::vector< unsigned char * >::value_type arg3 = 0 ;
   std::vector< unsigned char * >::value_type temp3 = 0 ;
   std::vector< unsigned char * >::value_type result;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(std::vector< uint8_t * > **)&jarg1; 
-  arg2 = (int)jarg2; 
-  
+  arg1 = *(std::vector< uint8_t * > **)&jarg1;
+  arg2 = (int)jarg2;
+
   arg3 = (std::vector< unsigned char * >::value_type) jenv->GetByteArrayElements(jarg3, 0);
   int arg3len = jenv->GetArrayLength(jarg3);
   if(arg3len != BLS::MESSAGE_HASH_LEN) {
       SWIG_JavaThrowException(jenv, SWIG_JavaIllegalArgumentException, "Message Hash byte array size not 32 bytes");
       return 0;
   }
-              
-  
+
+
   std::vector< unsigned char * >::value_type arg3copy = new unsigned char[arg3len];
   memcpy(arg3copy, arg3, arg3len);
 
   //temp3 = *(std::vector< unsigned char * >::value_type *)&jarg3;
-  //arg3 = (std::vector< unsigned char * >::value_type *)&temp3; 
+  //arg3 = (std::vector< unsigned char * >::value_type *)&temp3;
   try {
     result = (std::vector< unsigned char * >::value_type)std_vector_Sl_uint8_t_Sm__Sg__set(arg1,arg2, arg3copy);
   }
@@ -2995,9 +2995,9 @@ SWIGEXPORT jbyteArray JNICALL Java_org_axej_bls_JNI_ByteArrayVec_1set(JNIEnv *je
     SWIG_JavaThrowException(jenv, SWIG_JavaIndexOutOfBoundsException, (&_e)->what());
     return 0;
   }
-  
+
   jresult = jenv->NewByteArray(BLS::MESSAGE_HASH_LEN);
-  
+
     if (result == NULL) {
         SWIG_JavaThrowException(jenv, SWIG_JavaOutOfMemoryError, "Can't create new byte array");
         return NULL; //  out of memory error thrown
@@ -3011,38 +3011,38 @@ SWIGEXPORT jbyteArray JNICALL Java_org_axej_bls_JNI_ByteArrayVec_1set(JNIEnv *je
     }*/
 
     // move from the temp structure to the java structure
-    jenv->SetByteArrayRegion(jresult, 0, BLS::MESSAGE_HASH_LEN, (jbyte*)result);        
-    delete result; 
-  
+    jenv->SetByteArrayRegion(jresult, 0, BLS::MESSAGE_HASH_LEN, (jbyte*)result);
+    delete result;
+
   return jresult;
 }
 
 
-SWIGEXPORT jint JNICALL Java_org_axej_bls_JNI_ByteArrayVec_1size(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jint JNICALL Java_org_dashj_bls_JNI_ByteArrayVec_1size(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jint jresult = 0 ;
   std::vector< uint8_t * > *arg1 = (std::vector< uint8_t * > *) 0 ;
   int32_t result;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(std::vector< uint8_t * > **)&jarg1; 
+  arg1 = *(std::vector< uint8_t * > **)&jarg1;
   result = (int32_t)std_vector_Sl_uint8_t_Sm__Sg__size((std::vector< unsigned char * > const *)arg1);
-  jresult = (jint)result; 
+  jresult = (jint)result;
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_org_axej_bls_JNI_ByteArrayVec_1removeRange(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jint jarg3) {
+SWIGEXPORT void JNICALL Java_org_dashj_bls_JNI_ByteArrayVec_1removeRange(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jint jarg3) {
   std::vector< uint8_t * > *arg1 = (std::vector< uint8_t * > *) 0 ;
   int32_t arg2 ;
   int32_t arg3 ;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(std::vector< uint8_t * > **)&jarg1; 
-  arg2 = (int32_t)jarg2; 
+  arg1 = *(std::vector< uint8_t * > **)&jarg1;
+  arg2 = (int32_t)jarg2;
   arg3 = (int32_t)jarg3;
   for(int i = arg2; i <= arg3; i++)
       delete (*arg1)[i];
@@ -3050,12 +3050,12 @@ SWIGEXPORT void JNICALL Java_org_axej_bls_JNI_ByteArrayVec_1removeRange(JNIEnv *
 }
 
 
-SWIGEXPORT void JNICALL Java_org_axej_bls_JNI_delete_1ByteArrayVec(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+SWIGEXPORT void JNICALL Java_org_dashj_bls_JNI_delete_1ByteArrayVec(JNIEnv *jenv, jclass jcls, jlong jarg1) {
   std::vector< uint8_t * > *arg1 = (std::vector< uint8_t * > *) 0 ;
-  
+
   (void)jenv;
   (void)jcls;
-  arg1 = *(std::vector< uint8_t * > **)&jarg1; 
+  arg1 = *(std::vector< uint8_t * > **)&jarg1;
   //We must delete all of the elements first
   for(uint8_t * element : *arg1)
       delete element;
@@ -3063,37 +3063,37 @@ SWIGEXPORT void JNICALL Java_org_axej_bls_JNI_delete_1ByteArrayVec(JNIEnv *jenv,
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_new_1BigIntegerVec_1_1SWIG_10(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_new_1BigIntegerVec_1_1SWIG_10(JNIEnv *jenv, jclass jcls) {
   jlong jresult = 0 ;
   std::vector< bn_t * > *result = 0 ;
-  
+
   (void)jenv;
   (void)jcls;
   result = (std::vector< bn_t * > *)new std::vector< bn_t * >();
-  *(std::vector< bn_t * > **)&jresult = result; 
+  *(std::vector< bn_t * > **)&jresult = result;
   return jresult;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_new_1BigIntegerVec_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_new_1BigIntegerVec_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1) {
   jlong jresult = 0 ;
   std::vector< bn_t * >::size_type arg1 ;
   std::vector< bn_t * > *result = 0 ;
-  
+
   (void)jenv;
   (void)jcls;
-  arg1 = (std::vector< bn_t * >::size_type)jarg1; 
+  arg1 = (std::vector< bn_t * >::size_type)jarg1;
   result = (std::vector< bn_t * > *)new std::vector< bn_t * >(arg1);
-  *(std::vector< bn_t * > **)&jresult = result; 
+  *(std::vector< bn_t * > **)&jresult = result;
   return jresult;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_new_1BigIntegerVec_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_new_1BigIntegerVec_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   std::vector< bn_t * > *arg1 = 0 ;
   std::vector< bn_t * > *result = 0 ;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
@@ -3101,93 +3101,93 @@ SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_new_1BigIntegerVec_1_1SWIG_12(JNI
   if (!arg1) {
     SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< bn_t * > const & reference is null");
     return 0;
-  } 
+  }
   result = (std::vector< bn_t * > *)new std::vector< bn_t * >((std::vector< bn_t * > const &)*arg1);
-  *(std::vector< bn_t * > **)&jresult = result; 
+  *(std::vector< bn_t * > **)&jresult = result;
   return jresult;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_BigIntegerVec_1capacity(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_BigIntegerVec_1capacity(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   std::vector< bn_t * > *arg1 = (std::vector< bn_t * > *) 0 ;
   std::vector< bn_t * >::size_type result;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(std::vector< bn_t * > **)&jarg1; 
+  arg1 = *(std::vector< bn_t * > **)&jarg1;
   result = ((std::vector< bn_t * > const *)arg1)->capacity();
-  jresult = (jlong)result; 
+  jresult = (jlong)result;
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_org_axej_bls_JNI_BigIntegerVec_1reserve(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_org_dashj_bls_JNI_BigIntegerVec_1reserve(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
   std::vector< bn_t * > *arg1 = (std::vector< bn_t * > *) 0 ;
   std::vector< bn_t * >::size_type arg2 ;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(std::vector< bn_t * > **)&jarg1; 
-  arg2 = (std::vector< bn_t * >::size_type)jarg2; 
+  arg1 = *(std::vector< bn_t * > **)&jarg1;
+  arg2 = (std::vector< bn_t * >::size_type)jarg2;
   (arg1)->reserve(arg2);
 }
 
 
-SWIGEXPORT jboolean JNICALL Java_org_axej_bls_JNI_BigIntegerVec_1isEmpty(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jboolean JNICALL Java_org_dashj_bls_JNI_BigIntegerVec_1isEmpty(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jboolean jresult = 0 ;
   std::vector< bn_t * > *arg1 = (std::vector< bn_t * > *) 0 ;
   bool result;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(std::vector< bn_t * > **)&jarg1; 
+  arg1 = *(std::vector< bn_t * > **)&jarg1;
   result = (bool)((std::vector< bn_t * > const *)arg1)->empty();
-  jresult = (jboolean)result; 
+  jresult = (jboolean)result;
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_org_axej_bls_JNI_BigIntegerVec_1clear(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT void JNICALL Java_org_dashj_bls_JNI_BigIntegerVec_1clear(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   std::vector< bn_t * > *arg1 = (std::vector< bn_t * > *) 0 ;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(std::vector< bn_t * > **)&jarg1; 
+  arg1 = *(std::vector< bn_t * > **)&jarg1;
   (arg1)->clear();
 }
 
 
-SWIGEXPORT void JNICALL Java_org_axej_bls_JNI_BigIntegerVec_1push_1back(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_org_dashj_bls_JNI_BigIntegerVec_1push_1back(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
   std::vector< bn_t * > *arg1 = (std::vector< bn_t * > *) 0 ;
   std::vector< bn_t * >::value_type *arg2 = 0 ;
   std::vector< bn_t * >::value_type temp2 = 0 ;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(std::vector< bn_t * > **)&jarg1; 
+  arg1 = *(std::vector< bn_t * > **)&jarg1;
   temp2 = *(std::vector< bn_t * >::value_type *)&jarg2;
-  arg2 = (std::vector< bn_t * >::value_type *)&temp2; 
+  arg2 = (std::vector< bn_t * >::value_type *)&temp2;
   (arg1)->push_back((std::vector< bn_t * >::value_type const &)*arg2);
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_BigIntegerVec_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_BigIntegerVec_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   jlong jresult = 0 ;
   std::vector< bn_t * > *arg1 = (std::vector< bn_t * > *) 0 ;
   int arg2 ;
   std::vector< bn_t * >::value_type *result = 0 ;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(std::vector< bn_t * > **)&jarg1; 
-  arg2 = (int)jarg2; 
+  arg1 = *(std::vector< bn_t * > **)&jarg1;
+  arg2 = (int)jarg2;
   try {
     result = (std::vector< bn_t * >::value_type *) &std_vector_Sl_bn_t_Sm__Sg__get((std::vector< bn_t * > const *)arg1,arg2);
   }
@@ -3195,27 +3195,27 @@ SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_BigIntegerVec_1get(JNIEnv *jenv, 
     SWIG_JavaThrowException(jenv, SWIG_JavaIndexOutOfBoundsException, (&_e)->what());
     return 0;
   }
-  
-  *(std::vector< bn_t * >::value_type *)&jresult = *result; 
+
+  *(std::vector< bn_t * >::value_type *)&jresult = *result;
   return jresult;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_BigIntegerVec_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jlong jarg3) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_BigIntegerVec_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jlong jarg3) {
   jlong jresult = 0 ;
   std::vector< bn_t * > *arg1 = (std::vector< bn_t * > *) 0 ;
   int arg2 ;
   std::vector< bn_t * >::value_type *arg3 = 0 ;
   std::vector< bn_t * >::value_type temp3 = 0 ;
   std::vector< bn_t * >::value_type result;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(std::vector< bn_t * > **)&jarg1; 
-  arg2 = (int)jarg2; 
+  arg1 = *(std::vector< bn_t * > **)&jarg1;
+  arg2 = (int)jarg2;
   temp3 = *(std::vector< bn_t * >::value_type *)&jarg3;
-  arg3 = (std::vector< bn_t * >::value_type *)&temp3; 
+  arg3 = (std::vector< bn_t * >::value_type *)&temp3;
   try {
     result = (std::vector< bn_t * >::value_type)std_vector_Sl_bn_t_Sm__Sg__set(arg1,arg2,(bn_t * &)*arg3);
   }
@@ -3223,68 +3223,68 @@ SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_BigIntegerVec_1set(JNIEnv *jenv, 
     SWIG_JavaThrowException(jenv, SWIG_JavaIndexOutOfBoundsException, (&_e)->what());
     return 0;
   }
-  
-  *(std::vector< bn_t * >::value_type *)&jresult = result; 
+
+  *(std::vector< bn_t * >::value_type *)&jresult = result;
   return jresult;
 }
 
 
-SWIGEXPORT jint JNICALL Java_org_axej_bls_JNI_BigIntegerVec_1size(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jint JNICALL Java_org_dashj_bls_JNI_BigIntegerVec_1size(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jint jresult = 0 ;
   std::vector< bn_t * > *arg1 = (std::vector< bn_t * > *) 0 ;
   int32_t result;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(std::vector< bn_t * > **)&jarg1; 
+  arg1 = *(std::vector< bn_t * > **)&jarg1;
   result = (int32_t)std_vector_Sl_bn_t_Sm__Sg__size((std::vector< bn_t * > const *)arg1);
-  jresult = (jint)result; 
+  jresult = (jint)result;
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_org_axej_bls_JNI_BigIntegerVec_1removeRange(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jint jarg3) {
+SWIGEXPORT void JNICALL Java_org_dashj_bls_JNI_BigIntegerVec_1removeRange(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jint jarg3) {
   std::vector< bn_t * > *arg1 = (std::vector< bn_t * > *) 0 ;
   int32_t arg2 ;
   int32_t arg3 ;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(std::vector< bn_t * > **)&jarg1; 
-  arg2 = (int32_t)jarg2; 
-  arg3 = (int32_t)jarg3; 
+  arg1 = *(std::vector< bn_t * > **)&jarg1;
+  arg2 = (int32_t)jarg2;
+  arg3 = (int32_t)jarg3;
   std_vector_Sl_bn_t_Sm__Sg__removeRange(arg1,arg2,arg3);
 }
 
 
-SWIGEXPORT void JNICALL Java_org_axej_bls_JNI_delete_1BigIntegerVec(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+SWIGEXPORT void JNICALL Java_org_dashj_bls_JNI_delete_1BigIntegerVec(JNIEnv *jenv, jclass jcls, jlong jarg1) {
   std::vector< bn_t * > *arg1 = (std::vector< bn_t * > *) 0 ;
-  
+
   (void)jenv;
   (void)jcls;
-  arg1 = *(std::vector< bn_t * > **)&jarg1; 
+  arg1 = *(std::vector< bn_t * > **)&jarg1;
   delete arg1;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_new_1SignatureVector_1_1SWIG_10(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_new_1SignatureVector_1_1SWIG_10(JNIEnv *jenv, jclass jcls) {
   jlong jresult = 0 ;
   std::vector< bls::Signature > *result = 0 ;
-  
+
   (void)jenv;
   (void)jcls;
   result = (std::vector< bls::Signature > *)new std::vector< bls::Signature >();
-  *(std::vector< bls::Signature > **)&jresult = result; 
+  *(std::vector< bls::Signature > **)&jresult = result;
   return jresult;
 }
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_new_1SignatureVector_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_new_1SignatureVector_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   std::vector< bls::Signature > *arg1 = 0 ;
   std::vector< bls::Signature > *result = 0 ;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
@@ -3292,96 +3292,96 @@ SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_new_1SignatureVector_1_1SWIG_12(J
   if (!arg1) {
     SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< bls::Signature > const & reference is null");
     return 0;
-  } 
+  }
   result = (std::vector< bls::Signature > *)new std::vector< bls::Signature >((std::vector< bls::Signature > const &)*arg1);
-  *(std::vector< bls::Signature > **)&jresult = result; 
+  *(std::vector< bls::Signature > **)&jresult = result;
   return jresult;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_SignatureVector_1capacity(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_SignatureVector_1capacity(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   std::vector< bls::Signature > *arg1 = (std::vector< bls::Signature > *) 0 ;
   std::vector< bls::Signature >::size_type result;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(std::vector< bls::Signature > **)&jarg1; 
+  arg1 = *(std::vector< bls::Signature > **)&jarg1;
   result = ((std::vector< bls::Signature > const *)arg1)->capacity();
-  jresult = (jlong)result; 
+  jresult = (jlong)result;
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_org_axej_bls_JNI_SignatureVector_1reserve(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_org_dashj_bls_JNI_SignatureVector_1reserve(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
   std::vector< bls::Signature > *arg1 = (std::vector< bls::Signature > *) 0 ;
   std::vector< bls::Signature >::size_type arg2 ;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(std::vector< bls::Signature > **)&jarg1; 
-  arg2 = (std::vector< bls::Signature >::size_type)jarg2; 
+  arg1 = *(std::vector< bls::Signature > **)&jarg1;
+  arg2 = (std::vector< bls::Signature >::size_type)jarg2;
   (arg1)->reserve(arg2);
 }
 
 
-SWIGEXPORT jboolean JNICALL Java_org_axej_bls_JNI_SignatureVector_1isEmpty(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jboolean JNICALL Java_org_dashj_bls_JNI_SignatureVector_1isEmpty(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jboolean jresult = 0 ;
   std::vector< bls::Signature > *arg1 = (std::vector< bls::Signature > *) 0 ;
   bool result;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(std::vector< bls::Signature > **)&jarg1; 
+  arg1 = *(std::vector< bls::Signature > **)&jarg1;
   result = (bool)((std::vector< bls::Signature > const *)arg1)->empty();
-  jresult = (jboolean)result; 
+  jresult = (jboolean)result;
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_org_axej_bls_JNI_SignatureVector_1clear(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT void JNICALL Java_org_dashj_bls_JNI_SignatureVector_1clear(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   std::vector< bls::Signature > *arg1 = (std::vector< bls::Signature > *) 0 ;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(std::vector< bls::Signature > **)&jarg1; 
+  arg1 = *(std::vector< bls::Signature > **)&jarg1;
   (arg1)->clear();
 }
 
 
-SWIGEXPORT void JNICALL Java_org_axej_bls_JNI_SignatureVector_1push_1back(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+SWIGEXPORT void JNICALL Java_org_dashj_bls_JNI_SignatureVector_1push_1back(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
   std::vector< bls::Signature > *arg1 = (std::vector< bls::Signature > *) 0 ;
   std::vector< bls::Signature >::value_type *arg2 = 0 ;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   (void)jarg2_;
-  arg1 = *(std::vector< bls::Signature > **)&jarg1; 
+  arg1 = *(std::vector< bls::Signature > **)&jarg1;
   arg2 = *(std::vector< bls::Signature >::value_type **)&jarg2;
   if (!arg2) {
     SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< bls::Signature >::value_type const & reference is null");
     return ;
-  } 
+  }
   (arg1)->push_back((std::vector< bls::Signature >::value_type const &)*arg2);
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_SignatureVector_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_SignatureVector_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   jlong jresult = 0 ;
   std::vector< bls::Signature > *arg1 = (std::vector< bls::Signature > *) 0 ;
   int arg2 ;
   std::vector< bls::Signature >::value_type *result = 0 ;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(std::vector< bls::Signature > **)&jarg1; 
-  arg2 = (int)jarg2; 
+  arg1 = *(std::vector< bls::Signature > **)&jarg1;
+  arg2 = (int)jarg2;
   try {
     result = (std::vector< bls::Signature >::value_type *) &std_vector_Sl_bls_Signature_Sg__get((std::vector< bls::Signature > const *)arg1,arg2);
   }
@@ -3389,30 +3389,30 @@ SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_SignatureVector_1get(JNIEnv *jenv
     SWIG_JavaThrowException(jenv, SWIG_JavaIndexOutOfBoundsException, (&_e)->what());
     return 0;
   }
-  
-  *(std::vector< bls::Signature >::value_type **)&jresult = result; 
+
+  *(std::vector< bls::Signature >::value_type **)&jresult = result;
   return jresult;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_SignatureVector_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jlong jarg3, jobject jarg3_) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_SignatureVector_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jlong jarg3, jobject jarg3_) {
   jlong jresult = 0 ;
   std::vector< bls::Signature > *arg1 = (std::vector< bls::Signature > *) 0 ;
   int arg2 ;
   std::vector< bls::Signature >::value_type *arg3 = 0 ;
   SwigValueWrapper< bls::Signature > result;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   (void)jarg3_;
-  arg1 = *(std::vector< bls::Signature > **)&jarg1; 
-  arg2 = (int)jarg2; 
+  arg1 = *(std::vector< bls::Signature > **)&jarg1;
+  arg2 = (int)jarg2;
   arg3 = *(std::vector< bls::Signature >::value_type **)&jarg3;
   if (!arg3) {
     SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< bls::Signature >::value_type const & reference is null");
     return 0;
-  } 
+  }
   try {
     result = std_vector_Sl_bls_Signature_Sg__set(arg1,arg2,(bls::Signature const &)*arg3);
   }
@@ -3420,52 +3420,52 @@ SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_SignatureVector_1set(JNIEnv *jenv
     SWIG_JavaThrowException(jenv, SWIG_JavaIndexOutOfBoundsException, (&_e)->what());
     return 0;
   }
-  
-  *(std::vector< bls::Signature >::value_type **)&jresult = new std::vector< bls::Signature >::value_type((const std::vector< bls::Signature >::value_type &)result); 
+
+  *(std::vector< bls::Signature >::value_type **)&jresult = new std::vector< bls::Signature >::value_type((const std::vector< bls::Signature >::value_type &)result);
   return jresult;
 }
 
 
-SWIGEXPORT jint JNICALL Java_org_axej_bls_JNI_SignatureVector_1size(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jint JNICALL Java_org_dashj_bls_JNI_SignatureVector_1size(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jint jresult = 0 ;
   std::vector< bls::Signature > *arg1 = (std::vector< bls::Signature > *) 0 ;
   int32_t result;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(std::vector< bls::Signature > **)&jarg1; 
+  arg1 = *(std::vector< bls::Signature > **)&jarg1;
   result = (int32_t)std_vector_Sl_bls_Signature_Sg__size((std::vector< bls::Signature > const *)arg1);
-  jresult = (jint)result; 
+  jresult = (jint)result;
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_org_axej_bls_JNI_SignatureVector_1removeRange(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jint jarg3) {
+SWIGEXPORT void JNICALL Java_org_dashj_bls_JNI_SignatureVector_1removeRange(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jint jarg3) {
   std::vector< bls::Signature > *arg1 = (std::vector< bls::Signature > *) 0 ;
   int32_t arg2 ;
   int32_t arg3 ;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(std::vector< bls::Signature > **)&jarg1; 
-  arg2 = (int32_t)jarg2; 
-  arg3 = (int32_t)jarg3; 
+  arg1 = *(std::vector< bls::Signature > **)&jarg1;
+  arg2 = (int32_t)jarg2;
+  arg3 = (int32_t)jarg3;
   std_vector_Sl_bls_Signature_Sg__removeRange(arg1,arg2,arg3);
 }
 
 
-SWIGEXPORT void JNICALL Java_org_axej_bls_JNI_delete_1SignatureVector(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+SWIGEXPORT void JNICALL Java_org_dashj_bls_JNI_delete_1SignatureVector(JNIEnv *jenv, jclass jcls, jlong jarg1) {
   std::vector< bls::Signature > *arg1 = (std::vector< bls::Signature > *) 0 ;
-  
+
   (void)jenv;
   (void)jcls;
-  arg1 = *(std::vector< bls::Signature > **)&jarg1; 
+  arg1 = *(std::vector< bls::Signature > **)&jarg1;
   delete arg1;
 }
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_new_1InsecureSignatureVector_1_1SWIG_10(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_new_1InsecureSignatureVector_1_1SWIG_10(JNIEnv *jenv, jclass jcls) {
   jlong jresult = 0 ;
   std::vector< bls::InsecureSignature > *result = 0 ;
 
@@ -3476,7 +3476,7 @@ SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_new_1InsecureSignatureVector_1_1S
   return jresult;
 }
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_new_1InsecureSignatureVector_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_new_1InsecureSignatureVector_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   std::vector< bls::InsecureSignature > *arg1 = 0 ;
   std::vector< bls::InsecureSignature > *result = 0 ;
@@ -3495,7 +3495,7 @@ SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_new_1InsecureSignatureVector_1_1S
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_InsecureSignatureVector_1capacity(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_InsecureSignatureVector_1capacity(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   std::vector< bls::InsecureSignature > *arg1 = (std::vector< bls::InsecureSignature > *) 0 ;
   std::vector< bls::InsecureSignature >::size_type result;
@@ -3510,7 +3510,7 @@ SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_InsecureSignatureVector_1capacity
 }
 
 
-SWIGEXPORT void JNICALL Java_org_axej_bls_JNI_InsecureSignatureVector_1reserve(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_org_dashj_bls_JNI_InsecureSignatureVector_1reserve(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
   std::vector< bls::InsecureSignature > *arg1 = (std::vector< bls::InsecureSignature > *) 0 ;
   std::vector< bls::InsecureSignature >::size_type arg2 ;
 
@@ -3523,7 +3523,7 @@ SWIGEXPORT void JNICALL Java_org_axej_bls_JNI_InsecureSignatureVector_1reserve(J
 }
 
 
-SWIGEXPORT jboolean JNICALL Java_org_axej_bls_JNI_InsecureSignatureVector_1isEmpty(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jboolean JNICALL Java_org_dashj_bls_JNI_InsecureSignatureVector_1isEmpty(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jboolean jresult = 0 ;
   std::vector< bls::InsecureSignature > *arg1 = (std::vector< bls::InsecureSignature > *) 0 ;
   bool result;
@@ -3538,7 +3538,7 @@ SWIGEXPORT jboolean JNICALL Java_org_axej_bls_JNI_InsecureSignatureVector_1isEmp
 }
 
 
-SWIGEXPORT void JNICALL Java_org_axej_bls_JNI_InsecureSignatureVector_1clear(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT void JNICALL Java_org_dashj_bls_JNI_InsecureSignatureVector_1clear(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   std::vector< bls::InsecureSignature > *arg1 = (std::vector< bls::InsecureSignature > *) 0 ;
 
   (void)jenv;
@@ -3549,7 +3549,7 @@ SWIGEXPORT void JNICALL Java_org_axej_bls_JNI_InsecureSignatureVector_1clear(JNI
 }
 
 
-SWIGEXPORT void JNICALL Java_org_axej_bls_JNI_InsecureSignatureVector_1push_1back(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+SWIGEXPORT void JNICALL Java_org_dashj_bls_JNI_InsecureSignatureVector_1push_1back(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
   std::vector< bls::InsecureSignature > *arg1 = (std::vector< bls::InsecureSignature > *) 0 ;
   std::vector< bls::InsecureSignature >::value_type *arg2 = 0 ;
 
@@ -3567,7 +3567,7 @@ SWIGEXPORT void JNICALL Java_org_axej_bls_JNI_InsecureSignatureVector_1push_1bac
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_InsecureSignatureVector_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_InsecureSignatureVector_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   jlong jresult = 0 ;
   std::vector< bls::InsecureSignature > *arg1 = (std::vector< bls::InsecureSignature > *) 0 ;
   int arg2 ;
@@ -3591,7 +3591,7 @@ SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_InsecureSignatureVector_1get(JNIE
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_InsecureSignatureVector_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jlong jarg3, jobject jarg3_) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_InsecureSignatureVector_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jlong jarg3, jobject jarg3_) {
   jlong jresult = 0 ;
   std::vector< bls::InsecureSignature > *arg1 = (std::vector< bls::InsecureSignature > *) 0 ;
   int arg2 ;
@@ -3622,7 +3622,7 @@ SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_InsecureSignatureVector_1set(JNIE
 }
 
 
-SWIGEXPORT jint JNICALL Java_org_axej_bls_JNI_InsecureSignatureVector_1size(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jint JNICALL Java_org_dashj_bls_JNI_InsecureSignatureVector_1size(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jint jresult = 0 ;
   std::vector< bls::InsecureSignature > *arg1 = (std::vector< bls::InsecureSignature > *) 0 ;
   int32_t result;
@@ -3637,7 +3637,7 @@ SWIGEXPORT jint JNICALL Java_org_axej_bls_JNI_InsecureSignatureVector_1size(JNIE
 }
 
 
-SWIGEXPORT void JNICALL Java_org_axej_bls_JNI_InsecureSignatureVector_1removeRange(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jint jarg3) {
+SWIGEXPORT void JNICALL Java_org_dashj_bls_JNI_InsecureSignatureVector_1removeRange(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jint jarg3) {
   std::vector< bls::InsecureSignature > *arg1 = (std::vector< bls::InsecureSignature > *) 0 ;
   int32_t arg2 ;
   int32_t arg3 ;
@@ -3652,7 +3652,7 @@ SWIGEXPORT void JNICALL Java_org_axej_bls_JNI_InsecureSignatureVector_1removeRan
 }
 
 
-SWIGEXPORT void JNICALL Java_org_axej_bls_JNI_delete_1InsecureSignatureVector(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+SWIGEXPORT void JNICALL Java_org_dashj_bls_JNI_delete_1InsecureSignatureVector(JNIEnv *jenv, jclass jcls, jlong jarg1) {
   std::vector< bls::InsecureSignature > *arg1 = (std::vector< bls::InsecureSignature > *) 0 ;
 
   (void)jenv;
@@ -3661,100 +3661,100 @@ SWIGEXPORT void JNICALL Java_org_axej_bls_JNI_delete_1InsecureSignatureVector(JN
   delete arg1;
 }
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_new_1AggregationInfoVector_1_1SWIG_10(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_new_1AggregationInfoVector_1_1SWIG_10(JNIEnv *jenv, jclass jcls) {
   jlong jresult = 0 ;
   std::vector< bls::AggregationInfo > *result = 0 ;
-  
+
   (void)jenv;
   (void)jcls;
   result = (std::vector< bls::AggregationInfo > *)new std::vector< bls::AggregationInfo >();
-  *(std::vector< bls::AggregationInfo > **)&jresult = result; 
+  *(std::vector< bls::AggregationInfo > **)&jresult = result;
   return jresult;
 }
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_AggregationInfoVector_1capacity(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_AggregationInfoVector_1capacity(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   std::vector< bls::AggregationInfo > *arg1 = (std::vector< bls::AggregationInfo > *) 0 ;
   std::vector< bls::AggregationInfo >::size_type result;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(std::vector< bls::AggregationInfo > **)&jarg1; 
+  arg1 = *(std::vector< bls::AggregationInfo > **)&jarg1;
   result = ((std::vector< bls::AggregationInfo > const *)arg1)->capacity();
-  jresult = (jlong)result; 
+  jresult = (jlong)result;
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_org_axej_bls_JNI_AggregationInfoVector_1reserve(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_org_dashj_bls_JNI_AggregationInfoVector_1reserve(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
   std::vector< bls::AggregationInfo > *arg1 = (std::vector< bls::AggregationInfo > *) 0 ;
   std::vector< bls::AggregationInfo >::size_type arg2 ;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(std::vector< bls::AggregationInfo > **)&jarg1; 
-  arg2 = (std::vector< bls::AggregationInfo >::size_type)jarg2; 
+  arg1 = *(std::vector< bls::AggregationInfo > **)&jarg1;
+  arg2 = (std::vector< bls::AggregationInfo >::size_type)jarg2;
   (arg1)->reserve(arg2);
 }
 
 
-SWIGEXPORT jboolean JNICALL Java_org_axej_bls_JNI_AggregationInfoVector_1isEmpty(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jboolean JNICALL Java_org_dashj_bls_JNI_AggregationInfoVector_1isEmpty(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jboolean jresult = 0 ;
   std::vector< bls::AggregationInfo > *arg1 = (std::vector< bls::AggregationInfo > *) 0 ;
   bool result;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(std::vector< bls::AggregationInfo > **)&jarg1; 
+  arg1 = *(std::vector< bls::AggregationInfo > **)&jarg1;
   result = (bool)((std::vector< bls::AggregationInfo > const *)arg1)->empty();
-  jresult = (jboolean)result; 
+  jresult = (jboolean)result;
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_org_axej_bls_JNI_AggregationInfoVector_1clear(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT void JNICALL Java_org_dashj_bls_JNI_AggregationInfoVector_1clear(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   std::vector< bls::AggregationInfo > *arg1 = (std::vector< bls::AggregationInfo > *) 0 ;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(std::vector< bls::AggregationInfo > **)&jarg1; 
+  arg1 = *(std::vector< bls::AggregationInfo > **)&jarg1;
   (arg1)->clear();
 }
 
 
-SWIGEXPORT void JNICALL Java_org_axej_bls_JNI_AggregationInfoVector_1push_1back(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+SWIGEXPORT void JNICALL Java_org_dashj_bls_JNI_AggregationInfoVector_1push_1back(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
   std::vector< bls::AggregationInfo > *arg1 = (std::vector< bls::AggregationInfo > *) 0 ;
   std::vector< bls::AggregationInfo >::value_type *arg2 = 0 ;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   (void)jarg2_;
-  arg1 = *(std::vector< bls::AggregationInfo > **)&jarg1; 
+  arg1 = *(std::vector< bls::AggregationInfo > **)&jarg1;
   arg2 = *(std::vector< bls::AggregationInfo >::value_type **)&jarg2;
   if (!arg2) {
     SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< bls::AggregationInfo >::value_type const & reference is null");
     return ;
-  } 
+  }
   (arg1)->push_back((std::vector< bls::AggregationInfo >::value_type const &)*arg2);
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_AggregationInfoVector_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_AggregationInfoVector_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   jlong jresult = 0 ;
   std::vector< bls::AggregationInfo > *arg1 = (std::vector< bls::AggregationInfo > *) 0 ;
   int arg2 ;
   std::vector< bls::AggregationInfo >::value_type *result = 0 ;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(std::vector< bls::AggregationInfo > **)&jarg1; 
-  arg2 = (int)jarg2; 
+  arg1 = *(std::vector< bls::AggregationInfo > **)&jarg1;
+  arg2 = (int)jarg2;
   try {
     result = (std::vector< bls::AggregationInfo >::value_type *) &std_vector_Sl_bls_AggregationInfo_Sg__get((std::vector< bls::AggregationInfo > const *)arg1,arg2);
   }
@@ -3762,30 +3762,30 @@ SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_AggregationInfoVector_1get(JNIEnv
     SWIG_JavaThrowException(jenv, SWIG_JavaIndexOutOfBoundsException, (&_e)->what());
     return 0;
   }
-  
-  *(std::vector< bls::AggregationInfo >::value_type **)&jresult = result; 
+
+  *(std::vector< bls::AggregationInfo >::value_type **)&jresult = result;
   return jresult;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_AggregationInfoVector_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jlong jarg3, jobject jarg3_) {
+SWIGEXPORT jlong JNICALL Java_org_dashj_bls_JNI_AggregationInfoVector_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jlong jarg3, jobject jarg3_) {
   jlong jresult = 0 ;
   std::vector< bls::AggregationInfo > *arg1 = (std::vector< bls::AggregationInfo > *) 0 ;
   int arg2 ;
   std::vector< bls::AggregationInfo >::value_type *arg3 = 0 ;
   SwigValueWrapper< bls::AggregationInfo > result;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   (void)jarg3_;
-  arg1 = *(std::vector< bls::AggregationInfo > **)&jarg1; 
-  arg2 = (int)jarg2; 
+  arg1 = *(std::vector< bls::AggregationInfo > **)&jarg1;
+  arg2 = (int)jarg2;
   arg3 = *(std::vector< bls::AggregationInfo >::value_type **)&jarg3;
   if (!arg3) {
     SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< bls::AggregationInfo >::value_type const & reference is null");
     return 0;
-  } 
+  }
   try {
     result = std_vector_Sl_bls_AggregationInfo_Sg__set(arg1,arg2,(bls::AggregationInfo const &)*arg3);
   }
@@ -3793,38 +3793,38 @@ SWIGEXPORT jlong JNICALL Java_org_axej_bls_JNI_AggregationInfoVector_1set(JNIEnv
     SWIG_JavaThrowException(jenv, SWIG_JavaIndexOutOfBoundsException, (&_e)->what());
     return 0;
   }
-  
-  *(std::vector< bls::AggregationInfo >::value_type **)&jresult = new std::vector< bls::AggregationInfo >::value_type((const std::vector< bls::AggregationInfo >::value_type &)result); 
+
+  *(std::vector< bls::AggregationInfo >::value_type **)&jresult = new std::vector< bls::AggregationInfo >::value_type((const std::vector< bls::AggregationInfo >::value_type &)result);
   return jresult;
 }
 
 
-SWIGEXPORT jint JNICALL Java_org_axej_bls_JNI_AggregationInfoVector_1size(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jint JNICALL Java_org_dashj_bls_JNI_AggregationInfoVector_1size(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jint jresult = 0 ;
   std::vector< bls::AggregationInfo > *arg1 = (std::vector< bls::AggregationInfo > *) 0 ;
   int32_t result;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(std::vector< bls::AggregationInfo > **)&jarg1; 
+  arg1 = *(std::vector< bls::AggregationInfo > **)&jarg1;
   result = (int32_t)std_vector_Sl_bls_AggregationInfo_Sg__size((std::vector< bls::AggregationInfo > const *)arg1);
-  jresult = (jint)result; 
+  jresult = (jint)result;
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_org_axej_bls_JNI_AggregationInfoVector_1removeRange(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jint jarg3) {
+SWIGEXPORT void JNICALL Java_org_dashj_bls_JNI_AggregationInfoVector_1removeRange(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jint jarg3) {
   std::vector< bls::AggregationInfo > *arg1 = (std::vector< bls::AggregationInfo > *) 0 ;
   int32_t arg2 ;
   int32_t arg3 ;
-  
+
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(std::vector< bls::AggregationInfo > **)&jarg1; 
-  arg2 = (int32_t)jarg2; 
-  arg3 = (int32_t)jarg3; 
+  arg1 = *(std::vector< bls::AggregationInfo > **)&jarg1;
+  arg2 = (int32_t)jarg2;
+  arg3 = (int32_t)jarg3;
   std_vector_Sl_bls_AggregationInfo_Sg__removeRange(arg1,arg2,arg3);
 }
 
@@ -3832,4 +3832,3 @@ SWIGEXPORT void JNICALL Java_org_axej_bls_JNI_AggregationInfoVector_1removeRange
 #ifdef __cplusplus
 }
 #endif
-

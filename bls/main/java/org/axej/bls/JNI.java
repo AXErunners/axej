@@ -17,11 +17,11 @@
  * Version 3.0.12
  */
 
-package org.axej.bls;
+package org.dashj.bls;
 
 public class JNI {
 
-  public static String LIBRARY_NAME = "axejbls";
+  public static String LIBRARY_NAME = "dashjbls";
 
   public final static native String BLS_GROUP_ORDER_get();
   public final static native long BLS_MESSAGE_HASH_LEN_get();
