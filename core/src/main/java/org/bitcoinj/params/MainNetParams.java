@@ -382,8 +382,8 @@ public class MainNetParams extends AbstractBitcoinNetParams {
         nGovernanceMinQuorum = 10;
         nGovernanceFilterElements = 20000;
 
-        powDGWHeight = 34140;
-        powKGWHeight = 15200;
+        powDGWHeight = 14013;
+        powKGWHeight = 14000;
         powAllowMinimumDifficulty = false;
         powNoRetargeting = false;
 
