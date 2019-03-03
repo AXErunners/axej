@@ -9,7 +9,7 @@ set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
 add_library( # Sets the name of the library.
-        axejbls
+        dashjbls
         # Sets the library as a shared library.
        SHARED
         # Provides a relative path to your source file(s).
@@ -37,11 +37,11 @@ include_directories(${JNI_INCLUDE_DIRS}
 
 # This removes the 'lib' prefix from target library name on windows
 IF ("${CMAKE_SYSTEM_NAME}" STREQUAL "Windows")
-set_target_properties(axejbls PROPERTIES PREFIX "")
+set_target_properties(dashjbls PROPERTIES PREFIX "")
 ENDIF()
 
 target_link_libraries( # Specifies the target library.
-        axejbls
+        dashjbls
 
         # Links the target library to the bls library
         bls)
