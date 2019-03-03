@@ -1,5 +1,5 @@
 /*
- * Copyright 2018 Dash Core Group
+ * Copyright 2018 Axe Core Group
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,20 +17,20 @@
  * Version 3.0.12
  */
 
-package org.dashj.bls;
+package org.axej.bls;
 
-public class SWIGTYPE_p_std__vectorT_unsigned_char_t {
+public class SWIGTYPE_p_g1_t {
   private transient long swigCPtr;
 
-  protected SWIGTYPE_p_std__vectorT_unsigned_char_t(long cPtr, @SuppressWarnings("unused") boolean futureUse) {
+  protected SWIGTYPE_p_g1_t(long cPtr, @SuppressWarnings("unused") boolean futureUse) {
     swigCPtr = cPtr;
   }
 
-  protected SWIGTYPE_p_std__vectorT_unsigned_char_t() {
+  protected SWIGTYPE_p_g1_t() {
     swigCPtr = 0;
   }
 
-  protected static long getCPtr(SWIGTYPE_p_std__vectorT_unsigned_char_t obj) {
+  protected static long getCPtr(SWIGTYPE_p_g1_t obj) {
     return (obj == null) ? 0 : obj.swigCPtr;
   }
 }

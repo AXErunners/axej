@@ -1,5 +1,5 @@
 /*
- * Copyright 2018 Dash Core Group
+ * Copyright 2018 Axe Core Group
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,7 +17,7 @@
  * Version 3.0.12
  */
 
-package org.dashj.bls;
+package org.axej.bls;
 
 public class InsecureSignature {
   private transient long swigCPtr;

@@ -1,5 +1,5 @@
 /*
- * Copyright 2018 Dash Core Group
+ * Copyright 2018 Axe Core Group
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,7 +17,7 @@
  * Version 3.0.12
  */
 
-package org.dashj.bls;
+package org.axej.bls;
 
 public class BLS {
   private transient long swigCPtr;
@@ -58,7 +58,7 @@ public class BLS {
     JNI.BLS_HashPubKeys(SWIGTYPE_p_bn_t.getCPtr(output), numOutputs, MessageHashVector.getCPtr(serPubKeys), serPubKeys, SWIGTYPE_p_std__vectorT_size_t_t.getCPtr(sortedIndices));
   }
 
-  /*  Dash Core Only
+  /*  Axe Core Only
   public static PrivateKey PrivateKeyShare(PrivateKeyVector sks, byte [] id) {
     return new PrivateKey(JNI.BLS_PrivateKeyShare(PrivateKeyVector.getCPtr(sks), id), true);
   }

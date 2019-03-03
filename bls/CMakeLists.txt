@@ -1,5 +1,5 @@
 #
-# dashj-bls
+# axej-bls
 #
 # requires that libbls.a has been built with the build-bls-signatures.sh script
 #
@@ -9,11 +9,11 @@ set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
 add_library( # Sets the name of the library.
-        dashjbls
+        axejbls
         # Sets the library as a shared library.
        SHARED
         # Provides a relative path to your source file(s).
-        src/main/cpp/dashj-bls-signature-wrapper.cpp)
+        src/main/cpp/axej-bls-signature-wrapper.cpp)
 
 # Find Java
 
@@ -37,11 +37,11 @@ include_directories(${JNI_INCLUDE_DIRS}
 
 # This removes the 'lib' prefix from target library name on windows
 IF ("${CMAKE_SYSTEM_NAME}" STREQUAL "Windows")
-set_target_properties(dashjbls PROPERTIES PREFIX "")
+set_target_properties(axejbls PROPERTIES PREFIX "")
 ENDIF()
 
 target_link_libraries( # Specifies the target library.
-        dashjbls
+        axejbls
 
         # Links the target library to the bls library
         bls)

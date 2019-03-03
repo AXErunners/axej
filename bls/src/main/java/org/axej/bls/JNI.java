@@ -1,5 +1,5 @@
 /*
- * Copyright 2018 Dash Core Group
+ * Copyright 2018 Axe Core Group
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,11 +17,11 @@
  * Version 3.0.12
  */
 
-package org.dashj.bls;
+package org.axej.bls;
 
 public class JNI {
 
-  public static String LIBRARY_NAME = "dashjbls";
+  public static String LIBRARY_NAME = "axejbls";
 
   public final static native String BLS_GROUP_ORDER_get();
   public final static native long BLS_MESSAGE_HASH_LEN_get();
@@ -222,7 +222,7 @@ public class JNI {
   public final static native int AggregationInfoVector_size(long jarg1, AggregationInfoVector jarg1_);
   public final static native void AggregationInfoVector_removeRange(long jarg1, AggregationInfoVector jarg1_, int jarg2, int jarg3);
   public final static native void delete_AggregationInfoVector(long jarg1);
-  /* Dash Core only
+  /* Axe Core only
   public final static native long BLS_PrivateKeyShare(long jarg1, byte [] jarg2);
   public final static native long BLS_RecoverPrivateKey(long jarg1, long jarg2);
   public final static native long BLS_PublicKeyShare(long jarg1, byte [] jarg2);
