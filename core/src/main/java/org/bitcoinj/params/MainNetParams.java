@@ -78,26 +78,26 @@ public class MainNetParams extends AbstractBitcoinNetParams {
         // transactions are handled. Duplicated transactions could occur in the case where a coinbase had the same
         // extraNonce and the same outputs but appeared at different heights, and greatly complicated re-org handling.
         // Having these here simplifies block connection logic considerably.
-        checkpoints.put(  1500, Sha256Hash.wrap("000000aaf0300f59f49bc3e970bad15c11f961fe2347accffff19d96ec9778e3"));
-        checkpoints.put(  4991, Sha256Hash.wrap("000000003b01809551952460744d5dbb8fcbd6cbae3c220267bf7fa43f837367"));
-        checkpoints.put(  9918, Sha256Hash.wrap("00000000213e229f332c0ffbe34defdaa9e74de87f2d8d1f01af8d121c3c170b"));
-        checkpoints.put( 16912, Sha256Hash.wrap("00000000075c0d10371d55a60634da70f197548dbbfa4123e12abfcbc5738af9"));
-        checkpoints.put( 23912, Sha256Hash.wrap("0000000000335eac6703f3b1732ec8b2f89c3ba3a7889e5767b090556bb9a276"));
-        checkpoints.put( 35457, Sha256Hash.wrap("0000000000b0ae211be59b048df14820475ad0dd53b9ff83b010f71a77342d9f"));
-        checkpoints.put( 45479, Sha256Hash.wrap("000000000063d411655d590590e16960f15ceea4257122ac430c6fbe39fbf02d"));
-        checkpoints.put( 55895, Sha256Hash.wrap("0000000000ae4c53a43639a4ca027282f69da9c67ba951768a20415b6439a2d7"));
-        checkpoints.put( 68899, Sha256Hash.wrap("0000000000194ab4d3d9eeb1f2f792f21bb39ff767cb547fe977640f969d77b7"));
-        checkpoints.put( 74619, Sha256Hash.wrap("000000000011d28f38f05d01650a502cc3f4d0e793fbc26e2a2ca71f07dc3842"));
-        checkpoints.put( 75095, Sha256Hash.wrap("0000000000193d12f6ad352a9996ee58ef8bdc4946818a5fec5ce99c11b87f0d"));
-        checkpoints.put( 88805, Sha256Hash.wrap("00000000001392f1652e9bf45cd8bc79dc60fe935277cd11538565b4a94fa85f"));
-        checkpoints.put( 107996, Sha256Hash.wrap("00000000000a23840ac16115407488267aa3da2b9bc843e301185b7d17e4dc40"));
-        checkpoints.put( 137993, Sha256Hash.wrap("00000000000cf69ce152b1bffdeddc59188d7a80879210d6e5c9503011929c3c"));
-        checkpoints.put( 167996, Sha256Hash.wrap("000000000009486020a80f7f2cc065342b0c2fb59af5e090cd813dba68ab0fed"));
-        checkpoints.put( 207992, Sha256Hash.wrap("00000000000d85c22be098f74576ef00b7aa00c05777e966aff68a270f1e01a5"));
-        checkpoints.put( 312645, Sha256Hash.wrap("0000000000059dcb71ad35a9e40526c44e7aae6c99169a9e7017b7d84b1c2daf"));
-        checkpoints.put( 407452, Sha256Hash.wrap("000000000003c6a87e73623b9d70af7cd908ae22fee466063e4ffc20be1d2dbc"));
-        checkpoints.put( 523412, Sha256Hash.wrap("000000000000e54f036576a10597e0e42cc22a5159ce572f999c33975e121d4d"));
-        checkpoints.put( 523930, Sha256Hash.wrap("0000000000000bccdb11c2b1cfb0ecab452abf267d89b7f46eaf2d54ce6e652c"));
+        checkpoints.put(  1000, Sha256Hash.wrap("000001c94f32e43dc459bc522e343b41f179b7b486e155e819c3f251ee4a6d8d"));
+        checkpoints.put(  5000, Sha256Hash.wrap("0000002e22464e17a0140f686bfdd7794ade570f71d884098302cba16b6059d5"));
+        checkpoints.put( 10000, Sha256Hash.wrap("00000000009994b68f4fb71d5e3d21fa92b259c41c7734e1b10ab7d8fcabe78b"));
+        checkpoints.put( 12860, Sha256Hash.wrap("000000000002aae6fac2e55b094bcba9ded463d14bd81fa76f29623fa35d2261"));
+        checkpoints.put( 13500, Sha256Hash.wrap("0000000000028510da80feb2ec0804f3fdbf62744ca5979d93f56514bbc45396"));
+        checkpoints.put( 14385, Sha256Hash.wrap("000000000001af010a1dabf2dc45b4738c23453532c3c4d9b47903f8610a70b8"));
+        checkpoints.put( 15120, Sha256Hash.wrap("000000000002eea846d5d97fa085ac6336d3e69832703c3ebeda89fdcfbcb7e4"));
+        checkpoints.put( 20000, Sha256Hash.wrap("00000000000363c860c63cc8e9baf1cb93010385f697e91c538a4ea9df178a07"));
+        checkpoints.put( 23965, Sha256Hash.wrap("00000000000bd575ee988f5768e931c4b8e3ca74d8f0fe0721ff9558e34944b7"));
+        checkpoints.put( 27119, Sha256Hash.wrap("00000000000f139246bbe4022bec06387527d55972fd1a2619aaee5ed43b36c0"));
+        checkpoints.put( 29425, Sha256Hash.wrap("0000000000033abb70490884e1bc0eac1d36341f1afe2e66a148b4ff6feec6bf"));
+        checkpoints.put( 32749, Sha256Hash.wrap("00000000000c74050c24bdef66854a6489021316dd0bce146c9b1aba2755381c"));
+        checkpoints.put( 40282, Sha256Hash.wrap("000000000018ea87170b4590c45b67624512125e45bd1711f8f89746d8af2904"));
+        checkpoints.put( 52509, Sha256Hash.wrap("0000000000030ef66793b68d55e161dd7b8dc94c59a8c9ae42f757e38a1fa479"));
+        checkpoints.put( 65392, Sha256Hash.wrap("000000000005668c10dc846ba6859cafe052ffa8b6d8a6888272fd84b45a95f0"));
+        checkpoints.put( 71723, Sha256Hash.wrap("000000000021d50c7f8d564aa446e56c9ca63dacebdca74218c78dad73a1ea53"));
+        checkpoints.put( 86382, Sha256Hash.wrap("00000000003badda6d1a8eeed581ccb67d6b556be55c5ec85e9a0329dfc56f74"));
+        checkpoints.put( 93105, Sha256Hash.wrap("0000000000069b605e286b9c195bd400df907bd2fcf87398c2a0dfff5df0fbf3"));
+        checkpoints.put( 100315, Sha256Hash.wrap("0000000000002f905a48b6b6e26d77ea86483d07f02081d2ab1de5f6279a0311"));
+        checkpoints.put( 161083, Sha256Hash.wrap("0000000000092122485e390355bf4345ee51b0b14ba0d8c8ee6571ab41cca881"));
 /*
 
         dnsSeeds = new String[] {
