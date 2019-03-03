@@ -17,7 +17,7 @@
  * Version 3.0.12
  */
 
-package org.dashj.bls;
+package org.axej.bls;
 
 public class SWIGTYPE_p_g2_t {
   private transient long swigCPtr;

@@ -3,13 +3,13 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>dashj-parent</artifactId>
-        <groupId>org.dashj</groupId>
+        <artifactId>axej-parent</artifactId>
+        <groupId>org.axej</groupId>
         <version>0.15-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>dashj-bls</artifactId>
+    <artifactId>axej-bls</artifactId>
 
     <build>
         <plugins>

@@ -17,7 +17,7 @@
  * Version 3.0.12
  */
 
-package org.dashj.bls;
+package org.axej.bls;
 
 
 public class AggregationInfoVector extends java.util.AbstractList<AggregationInfo> {

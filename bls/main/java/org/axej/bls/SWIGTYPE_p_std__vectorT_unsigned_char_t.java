@@ -17,7 +17,7 @@
  * Version 3.0.12
  */
 
-package org.dashj.bls;
+package org.axej.bls;
 
 public class SWIGTYPE_p_std__vectorT_unsigned_char_t {
   private transient long swigCPtr;

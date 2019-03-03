@@ -15,7 +15,7 @@
  *
  */
 
-package org.dashj.bls;
+package org.axej.bls;
 
 public abstract class BLSObject {
     protected transient long cPointer;

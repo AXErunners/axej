@@ -17,7 +17,7 @@
  * Version 3.0.12
  */
 
-package org.dashj.bls;
+package org.axej.bls;
 
 import com.google.common.base.Preconditions;
 

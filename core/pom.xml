@@ -346,7 +346,7 @@
     <dependencies>
         <dependency>
             <groupId>org.axej</groupId>
-            <artifactId>dashj-bls</artifactId>
+            <artifactId>axej-bls</artifactId>
             <version>${project.parent.version}</version>
         </dependency>
         <dependency>

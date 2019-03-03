@@ -17,7 +17,7 @@
  * Version 3.0.12
  */
 
-package org.dashj.bls;
+package org.axej.bls;
 
 public class BigIntegerVector extends java.util.AbstractList<SWIGTYPE_p_bn_t> {
   private transient long swigCPtr;
