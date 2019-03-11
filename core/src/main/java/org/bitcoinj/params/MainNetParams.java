@@ -377,7 +377,7 @@ public class MainNetParams extends AbstractBitcoinNetParams {
 
         fulfilledRequestExpireTime = 60*60;
         masternodeMinimumConfirmations = 15;
-        superblockStartBlock = 614820;
+        superblockStartBlock = 9999999;
         superblockCycle = 16616;
         nGovernanceMinQuorum = 10;
         nGovernanceFilterElements = 20000;
