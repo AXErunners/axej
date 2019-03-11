@@ -18,7 +18,7 @@ public class CoinDefinition {
     public static final String cryptsyMarketId = "155";
     public static final String cryptsyMarketCurrency = "BTC";
     public static final String PATTERN_PRIVATE_KEY_START_UNCOMPRESSED = "[7]";
-    public static final String PATTERN_PRIVATE_KEY_START_COMPRESSED = "[X]";
+    public static final String PATTERN_PRIVATE_KEY_START_COMPRESSED = "[P]";
 
     public enum CoinPrecision {
         Coins,
