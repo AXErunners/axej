@@ -369,7 +369,7 @@ public class MainNetParams extends AbstractBitcoinNetParams {
         };
 
         strSporkAddress = "PR8VqUyRm1Dm9tii6uv9D7gidWyA56SvqZ";
-        budgetPaymentsStartBlock = 9999999;
+        budgetPaymentsStartBlock = 271350;
 
         DIP0001Window = MAINNET_MAJORITY_DIP0001_WINDOW;
         DIP0001Upgrade = MAINNET_MAJORITY_DIP0001_THRESHOLD;
@@ -377,7 +377,7 @@ public class MainNetParams extends AbstractBitcoinNetParams {
 
         fulfilledRequestExpireTime = 60*60;
         masternodeMinimumConfirmations = 15;
-        superblockStartBlock = 9999999;
+        superblockStartBlock = 304800;
         superblockCycle = 16616;
         nGovernanceMinQuorum = 10;
         nGovernanceFilterElements = 20000;
